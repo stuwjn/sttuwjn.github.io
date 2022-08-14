@@ -4,6 +4,56 @@
   
     
     <entry>
+      <title>Markdown展开折叠功能</title>
+      <link href="/2022/08/14/Markdown%E5%B1%95%E5%BC%80%E6%8A%98%E5%8F%A0%E5%8A%9F%E8%83%BD/"/>
+      <url>/2022/08/14/Markdown%E5%B1%95%E5%BC%80%E6%8A%98%E5%8F%A0%E5%8A%9F%E8%83%BD/</url>
+      
+        <content type="html"><![CDATA[<h2 id="HTML-5-details标签"><a href="#HTML-5-details标签" class="headerlink" title="HTML 5 details标签"></a>HTML 5 details标签</h2><blockquote><p>details定义和用法</p></blockquote><p><code>&lt;details&gt; </code>标签用于描述文档或文档某个部分的细节。</p><blockquote><p>summary子标签</p></blockquote><p>标签可以为 details 定义标题。标题是可见的，</p><p><strong>用户点击标题时，会显示出 details</strong></p><p>而markdown中可以写HTML，于是可以使用如下HTML标签实现展开折叠功能：</p><p>&#96;<details><summary>详情展开&#x2F;收起</summary><br>被折叠的内容</p></details>`<details><summary>题目</summary>被折叠的内容</details><blockquote><p>details内嵌markdown语法内容</p></blockquote><pre class="line-numbers language-none"><code class="language-none">&lt;details&gt;&lt;summary&gt;展开查看&lt;&#x2F;summary&gt;&lt;pre&gt;&lt;code&gt;System.out.println(&quot;Hello to see U!&quot;);&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;&lt;&#x2F;details&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><details><summary>在details里面可以嵌套合法markdown语法，例如代码块等等</summary><pre><code>int main()&#123;    printf("hello world");    return 0;&#125;</code></pre></details><ul><li><input disabled="" type="checkbox"> 关于对应语言代码的高亮显示有待补充</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 基础 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Markdown </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Markdown嵌入视频</title>
+      <link href="/2022/08/14/Markdown%E5%B5%8C%E5%85%A5%E8%A7%86%E9%A2%91/"/>
+      <url>/2022/08/14/Markdown%E5%B5%8C%E5%85%A5%E8%A7%86%E9%A2%91/</url>
+      
+        <content type="html"><![CDATA[<h2 id="Markdown-嵌入视频"><a href="#Markdown-嵌入视频" class="headerlink" title="Markdown 嵌入视频"></a>Markdown 嵌入视频</h2><blockquote><p>由于 Markdown 支持 HTML 语法，会对相应的标签进行解析。所以我们可以通过 HTML 语法将视频放入到我们的 Markdown 中。</p></blockquote><p>用法如下：</p><p><code>&lt;iframe height=500 width=500 src=&quot;视频地址&quot;&gt;</code></p><p>其中 height 和 width 是 HTML 中的属性可以设置视频的大小，我们也可以使用 HTML 中的其他属性对插入视频进行相应设置。</p><h3 id="插入方法"><a href="#插入方法" class="headerlink" title="插入方法"></a>插入方法</h3><h6 id="本地插入方法"><a href="#本地插入方法" class="headerlink" title="本地插入方法"></a>本地插入方法</h6><p>在 src 中加入本地视频所对应的路径即可。</p><p><code>&lt;iframe height=500 width=500 src=&quot;本地视频路径&quot;&gt;</code></p><h6 id="在线插入方法"><a href="#在线插入方法" class="headerlink" title="在线插入方法"></a>在线插入方法</h6><p>在 src 中加入视频链接即可。</p><p><code>&lt;iframe height=500 width=500 src=&quot;在线视频链接&quot;&gt;</code></p><h3 id="B站视频解析"><a href="#B站视频解析" class="headerlink" title="B站视频解析"></a>B站视频解析</h3><blockquote><p>注：现在B站外链播放有限制了，只能做更改大小这类简单的了目前</p></blockquote><blockquote><p>以稚晖君自创机械键盘视频链接为例子</p></blockquote><p>原链接： <code>&lt;iframe src=&quot;//player.bilibili.com/player.html?aid=856138376&amp;bvid=BV19V4y1J7Hx&amp;cid=782251995&amp;page=1&quot; scrolling=&quot;no&quot; border=&quot;0&quot; frameborder=&quot;no&quot; framespacing=&quot;0&quot; allowfullscreen=&quot;true&quot;&gt; &lt;/iframe&gt;</code></p><p>修改后：<code>&lt;iframe src=&quot;//player.bilibili.com/player.html?aid=856138376&amp;bvid=BV19V4y1J7Hx&amp;cid=782251995&amp;page=1&amp;high_quality=1&amp;danmaku=0&quot; allowfullscreen=&quot;allowfullscreen&quot; width=&quot;100%&quot; height=&quot;500&quot; scrolling=&quot;no&quot; frameborder=&quot;0&quot; sandbox=&quot;allow-top-navigation allow-same-origin allow-forms allow-scripts&quot;&gt; &lt;/iframe&gt;</code></p><p>代码解释：</p><pre class="line-numbers language-none"><code class="language-none">BILIBILI 地址PC端参数    &amp;high_quality&#x3D;1   (1&#x3D;最高画质 0&#x3D;最低画质)    &amp;danmaku&#x3D;0   (1&#x3D;打开弹幕 0&#x3D;关闭弹幕)iframe 参数    allowfullscreen&#x3D;&quot;allowfullscreen&quot; #移动端全屏    sandbox&#x3D;&quot;allow-top-navigation allow-same-origin allow-forms allow-scripts&quot; #禁止弹出网页<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><iframe src="//player.bilibili.com/player.html?aid=856138376&bvid=BV19V4y1J7Hx&cid=782251995&page=1&high_quality=1&danmaku=0" allowfullscreen="allowfullscreen" width="100%" height="500" scrolling="no" frameborder="0" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts"> </iframe><blockquote><p>附属性解释</p></blockquote><table><thead><tr><th align="center">属性</th><th align="center">值</th><th align="center">描述</th></tr></thead><tbody><tr><td align="center">align</td><td align="center">left right top middle bottom</td><td align="center">不赞成使用。请使用样式代替。规定如何根据周围的元素来对齐此框架。</td></tr><tr><td align="center"></td><td align="center"></td><td align="center"></td></tr><tr><td align="center">frameborder</td><td align="center">10</td><td align="center">规定是否显示框架周围的边框。</td></tr><tr><td align="center">height</td><td align="center">pixels%</td><td align="center">规定 iframe 的高度。</td></tr><tr><td align="center">longdesc</td><td align="center">URL</td><td align="center">规定一个页面，该页面包含了有关iframe 的较长描述。</td></tr><tr><td align="center"></td><td align="center"></td><td align="center"></td></tr><tr><td align="center">marginheight</td><td align="center">pixels</td><td align="center">定义 iframe的顶部和底部的边距。</td></tr><tr><td align="center"></td><td align="center"></td><td align="center"></td></tr><tr><td align="center">marginwidth</td><td align="center">pixels</td><td align="center">定义 iframe的左侧和右侧的边距。</td></tr><tr><td align="center"></td><td align="center"></td><td align="center"></td></tr><tr><td align="center">name</td><td align="center">frame_name</td><td align="center">规定 iframe 的名称。</td></tr><tr><td align="center">sandbox</td><td align="center">“”allow-formsallow-same-originallow-scriptsallow-top-navigation</td><td align="center">启用一系列对 &lt;_iframe&gt; 中内容的额外限制。</td></tr><tr><td align="center">scrolling</td><td align="center">yesnoauto</td><td align="center">规定是否在 iframe中显示滚动条。</td></tr><tr><td align="center"></td><td align="center"></td><td align="center"></td></tr><tr><td align="center">seamless</td><td align="center">seamless</td><td align="center">规定 &lt;_iframe&gt; 看上去像是包含文档的一部分。</td></tr><tr><td align="center">src</td><td align="center">URL</td><td align="center">规定在 iframe中显示的文档的 URL。</td></tr><tr><td align="center"></td><td align="center"></td><td align="center"></td></tr><tr><td align="center">srcdoc</td><td align="center">HTML_code</td><td align="center">规定在 &lt;_iframe&gt; 中显示的页面的 HTML 内容。</td></tr><tr><td align="center">width</td><td align="center">pixels%</td><td align="center">定义 iframe 的宽度。</td></tr></tbody></table>]]></content>
+      
+      
+      <categories>
+          
+          <category> 基础 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Markdown </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Hello World</title>
       <link href="/2022/08/10/hello-world/"/>
       <url>/2022/08/10/hello-world/</url>
@@ -17,7 +67,7 @@
     
     
     <entry>
-      <title>markdown入门手册</title>
+      <title>Markdown入门手册</title>
       <link href="/2022/08/10/Markdown%E5%85%A5%E9%97%A8%E6%89%8B%E5%86%8C/"/>
       <url>/2022/08/10/Markdown%E5%85%A5%E9%97%A8%E6%89%8B%E5%86%8C/</url>
       
