@@ -1,0 +1,2778 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="离散数学笔记Discrete Mathematics">
+    <meta name="description" content="
+离散数学笔记Discrete Mathematics
+
+—————————————————————————————–Design By 2100301629王家寧
+
+
+第一章  集合1.集合的运算①补运算
+
+②对称差运算
+2.集合运算的性">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>离散数学笔记Discrete Mathematics | NING</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+    
+
+
+    <!-- bg-cover style     -->
+
+
+
+<link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+<link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+<link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+<link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+<link rel="stylesheet" type="text/css" href="/css/matery.css">
+<link rel="stylesheet" type="text/css" href="/css/my.css">
+<link rel="stylesheet" type="text/css" href="/css/dark.css" media="none" onload="if(media!='all')media='all'">
+
+
+
+
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+    <link rel="stylesheet" href="/css/post.css">
+
+
+
+
+    
+        <link rel="stylesheet" type="text/css" href="/css/reward.css">
+    
+
+
+
+    <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
+
+<meta name="generator" content="Hexo 6.2.0"></head>
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">NING</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+  <li>
+    <a href="javascript:;" class="waves-effect waves-light" onclick="switchNightMode()" title="深色/浅色模式" >
+      <i id="sum-moon-icon" class="fas fa-sun" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">NING</div>
+        <div class="logo-desc">
+            
+            双木非林，田下有心
+            
+        </div>
+    </div>
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/stuwjn/" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/stuwjn/" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/23.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">离散数学笔记Discrete Mathematics</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
+                                <span class="chip bg-color">学习笔记</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E5%A4%A7%E5%AD%A6/" class="post-category">
+                                大学
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2022-09-14
+                </div>
+                
+
+                
+
+                
+
+                
+
+                
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.min.css">
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <hr>
+<h1 id="离散数学笔记"><a href="#离散数学笔记" class="headerlink" title="离散数学笔记"></a>离散数学笔记</h1><h1 id="Discrete-Mathematics"><a href="#Discrete-Mathematics" class="headerlink" title="Discrete Mathematics"></a>Discrete Mathematics</h1><blockquote>
+<ul>
+<li>—————————————————————————————–<em><strong>Design By 2100301629王家寧</strong></em></li>
+</ul>
+</blockquote>
+<h2 id="第一章-集合"><a href="#第一章-集合" class="headerlink" title="第一章  集合"></a>第一章  集合</h2><h3 id="1-集合的运算"><a href="#1-集合的运算" class="headerlink" title="1.集合的运算"></a>1.集合的运算</h3><h4 id="①补运算"><a href="#①补运算" class="headerlink" title="①补运算"></a>①补运算</h4><p><img src="https://blogimage-1-1313323272.cos.ap-nanjing.myqcloud.com/Img/202209171039284.png" alt="image-20220910170624452"></p>
+<hr>
+<h4 id="②对称差运算"><a href="#②对称差运算" class="headerlink" title="②对称差运算"></a>②对称差运算</h4><p><img src="https://blogimage-1-1313323272.cos.ap-nanjing.myqcloud.com/Img/202209171039973.png" alt="image-20220910170918358"></p>
+<h3 id="2-集合运算的性质"><a href="#2-集合运算的性质" class="headerlink" title="2.集合运算的性质"></a>2.集合运算的性质</h3><h4 id="①集合运算的基本恒等式"><a href="#①集合运算的基本恒等式" class="headerlink" title="①集合运算的基本恒等式"></a>①集合运算的基本恒等式</h4><blockquote>
+<p> （可用文氏图进行相关推导）</p>
+</blockquote>
+<blockquote>
+<p>重点记忆德摩根律和补交转换律    ⑩和⑪</p>
+<p>德摩根律：补集分配进括号里面就把括号里面的交并符号反过来</p>
+<p>补交转换律：交补连着写可以换成差</p>
+</blockquote>
+<p><img src="https://blogimage-1-1313323272.cos.ap-nanjing.myqcloud.com/Img/202209171040097.png" alt="image-20220910171146929"></p>
+<p><img src="https://blogimage-1-1313323272.cos.ap-nanjing.myqcloud.com/Img/202209171040726.png" alt="image-20220910171231566"></p>
+<hr>
+<blockquote>
+<p>在证明题中，可以使用假设X来进行代入来证明，也可以通过举反例来列出具体的实例来推翻命题</p>
+</blockquote>
+<hr>
+<h4 id="②容斥原理"><a href="#②容斥原理" class="headerlink" title="②容斥原理"></a>②容斥原理</h4><blockquote>
+<p>容斥原理由来：将相容重的集合部分在计算并集集合的基数的时候进行排斥出去，故称容斥原理</p>
+</blockquote>
+<blockquote>
+<p>基数：集合中元素的个数</p>
+</blockquote>
+<hr>
+<p><img src="https://blogimage-1-1313323272.cos.ap-nanjing.myqcloud.com/Img/202209171040124.png" alt="image-20220910172705888"></p>
+<p><img src="https://blogimage-1-1313323272.cos.ap-nanjing.myqcloud.com/Img/202209171040623.png" alt="image-20220910172720139"></p>
+<hr>
+<h2 id="第二章-关系"><a href="#第二章-关系" class="headerlink" title="第二章  关系"></a>第二章  关系</h2><h3 id="1-序偶与笛卡尔积"><a href="#1-序偶与笛卡尔积" class="headerlink" title="1.序偶与笛卡尔积"></a>1.序偶与笛卡尔积</h3><ul>
+<li>序偶中有几个元素就叫做几元序偶</li>
+</ul>
+<blockquote>
+<p>笛卡尔积的定义</p>
+</blockquote>
+<p><img src="https://blogimage-1-1313323272.cos.ap-nanjing.myqcloud.com/Img/202209171040048.png" alt="image-20220910175717172"></p>
+<hr>
+<p><img src="https://blogimage-1-1313323272.cos.ap-nanjing.myqcloud.com/Img/202209171040138.png" alt="image-20220910175920205"></p>
+<hr>
+<blockquote>
+<p>笛卡尔积的性质</p>
+</blockquote>
+<ul>
+<li>笛卡尔积不满足交换律和结合律，但是对交和并都满足分配律</li>
+<li><img src="https://blogimage-1-1313323272.cos.ap-nanjing.myqcloud.com/Img/202209171040783.png" alt="image-20220910180104785"></li>
+</ul>
+<hr>
+<h3 id="2-关系的定义"><a href="#2-关系的定义" class="headerlink" title="2.关系的定义"></a>2.关系的定义</h3><p><img src="https://blogimage-1-1313323272.cos.ap-nanjing.myqcloud.com/Img/202209171040426.png" alt="image-20220910180803730"></p>
+<hr>
+<p><img src="https://blogimage-1-1313323272.cos.ap-nanjing.myqcloud.com/Img/202209171040844.png" alt="image-20220910180943298"></p>
+<hr>
+<blockquote>
+<p>几种特殊的关系：空关系、全域关系、恒等关系</p>
+</blockquote>
+<p><img src="https://blogimage-1-1313323272.cos.ap-nanjing.myqcloud.com/Img/202209171041441.png" alt="image-20220910181345614"></p>
+<hr>
+<blockquote>
+<p>　　关系的定义域和值域</p>
+</blockquote>
+<p><img src="https://blogimage-1-1313323272.cos.ap-nanjing.myqcloud.com/Img/202209171041943.png" alt="image-20220910181556855"></p>
+<hr>
+<h3 id="3-关系的表示"><a href="#3-关系的表示" class="headerlink" title="3.关系的表示"></a>3.关系的表示</h3><ul>
+<li>关系图通过有向弧的方式表示</li>
+</ul>
+<p><img src="https://blogimage-1-1313323272.cos.ap-nanjing.myqcloud.com/Img/202209171041251.png" alt="image-20220910182139372"></p>
+<hr>
+<ul>
+<li><p>关系矩阵表示法</p>
+<p><img src="https://blogimage-1-1313323272.cos.ap-nanjing.myqcloud.com/Img/202209171041859.png" alt="image-20220910182301689"></p>
+</li>
+</ul>
+<hr>
+<h3 id="4-关系的性质"><a href="#4-关系的性质" class="headerlink" title="4.关系的性质"></a>4.关系的性质</h3><h4 id="①自反性与反自反性"><a href="#①自反性与反自反性" class="headerlink" title="①自反性与反自反性"></a>①自反性与反自反性</h4><p><img src="https://blogimage-1-1313323272.cos.ap-nanjing.myqcloud.com/Img/202209171041851.png" alt="image-20220910182521132"></p>
+<hr>
+<h4 id="②对称性与反对称性"><a href="#②对称性与反对称性" class="headerlink" title="②对称性与反对称性"></a>②对称性与反对称性</h4><p><img src="https://blogimage-1-1313323272.cos.ap-nanjing.myqcloud.com/Img/202209171041106.png" alt="image-20220910182718110"></p>
+<hr>
+<p><img src="https://blogimage-1-1313323272.cos.ap-nanjing.myqcloud.com/Img/202209171041739.png" alt="image-20220910183142174"></p>
+<hr>
+<blockquote>
+<p>对称性和反对称性并非对立关系</p>
+</blockquote>
+<h4 id="③传递性"><a href="#③传递性" class="headerlink" title="③传递性"></a>③传递性</h4><p><img src="https://blogimage-1-1313323272.cos.ap-nanjing.myqcloud.com/Img/202209171041205.png" alt="image-20220910183304642"></p>
+<h4 id="关系性质的判别"><a href="#关系性质的判别" class="headerlink" title="关系性质的判别"></a>关系性质的判别</h4><p><img src="https://blogimage-1-1313323272.cos.ap-nanjing.myqcloud.com/Img/202209171041720.png" alt="image-20220910183733500"></p>
+<h3 id="5-关系的基本运算"><a href="#5-关系的基本运算" class="headerlink" title="5.关系的基本运算"></a>5.关系的基本运算</h3><blockquote>
+<p>关系是一种特殊的集合，因此集合的基本运算对关系也同样适用</p>
+</blockquote>
+<p><img src="https://blogimage-1-1313323272.cos.ap-nanjing.myqcloud.com/Img/202209171041301.png" alt="image-20220910184126024"></p>
+<hr>
+<h3 id="6-关系的复合运算"><a href="#6-关系的复合运算" class="headerlink" title="6.关系的复合运算"></a>6.关系的复合运算</h3><p><img src="https://blogimage-1-1313323272.cos.ap-nanjing.myqcloud.com/Img/202209171041369.png" alt="image-20220910184450743"></p>
+<hr>
+<blockquote>
+<p>复合关系的关系矩阵</p>
+</blockquote>
+<p><img src="https://blogimage-1-1313323272.cos.ap-nanjing.myqcloud.com/Img/202209171041255.png" alt="image-20220910184834326"></p>
+<hr>
+<ul>
+<li>矩阵相乘是将&#x3D;&#x3D;前矩阵&#x3D;&#x3D;的<strong>第一行</strong>分别和&#x3D;&#x3D;后矩阵&#x3D;&#x3D;的<strong>各列</strong>进行<strong>相乘并相加</strong>得到&#x3D;&#x3D;新矩阵&#x3D;&#x3D;的&#x3D;&#x3D;第一行元素&#x3D;&#x3D;</li>
+<li>这里改为<strong>布尔与</strong>和<strong>布尔或</strong>运算是因为，有时运算结果是2或者更多，但是&#x3D;&#x3D;实际上是一个序偶&#x3D;&#x3D;，所以结果为一</li>
+</ul>
+<hr>
+<blockquote>
+<p>复合运算满足&#x3D;&#x3D;并运算&#x3D;&#x3D;的分配律，但是不满足&#x3D;&#x3D;交运算&#x3D;&#x3D;的分配律</p>
+</blockquote>
+<p><img src="https://blogimage-1-1313323272.cos.ap-nanjing.myqcloud.com/Img/202209171041891.png" alt="image-20220910185732002"></p>
+<hr>
+<h3 id="7-关系的逆运算"><a href="#7-关系的逆运算" class="headerlink" title="7.关系的逆运算"></a>7.关系的逆运算</h3><ul>
+<li>将元素对调，矩阵转置即为关系的逆运算</li>
+</ul>
+<p><img src="https://blogimage-1-1313323272.cos.ap-nanjing.myqcloud.com/Img/202209171041607.png" alt="image-20220910190625694"></p>
+<hr>
+<blockquote>
+<p>逆运算的性质</p>
+</blockquote>
+<p><img src="https://blogimage-1-1313323272.cos.ap-nanjing.myqcloud.com/Img/202209171041289.png" alt="image-20220910190737561"></p>
+<hr>
+<h3 id="8-关系的幂运算"><a href="#8-关系的幂运算" class="headerlink" title="8.关系的幂运算"></a>8.关系的幂运算</h3><blockquote>
+<p> R的零次幂就是A上的恒等关系</p>
+</blockquote>
+<p><img src="https://blogimage-1-1313323272.cos.ap-nanjing.myqcloud.com/Img/202209171041411.png" alt="image-20220910190956658"></p>
+<hr>
+<blockquote>
+<p>关系的幂运算的关系矩阵示例</p>
+</blockquote>
+<p><img src="https://blogimage-1-1313323272.cos.ap-nanjing.myqcloud.com/Img/202209171041919.png" alt="image-20220910191152186"></p>
+<hr>
+<p><img src="https://blogimage-1-1313323272.cos.ap-nanjing.myqcloud.com/Img/202209171041033.png" alt="image-20220910191305441"></p>
+<hr>
+<p><img src="https://blogimage-1-1313323272.cos.ap-nanjing.myqcloud.com/Img/202209171041699.png" alt="image-20220910191320858"></p>
+<hr>
+<blockquote>
+<p>幂运算的性质：简言之，有限集A上的关系R的幂序列R的0~n次幂是一个周期变化的序列（n无穷大）</p>
+<p>也就是&#x3D;&#x3D;鸽巢原理&#x3D;&#x3D;：<strong>如果有n+1个鸽子飞进了n个鸽巢中，那么必定有鸽巢中至少飞进了2只鸽子。</strong></p>
+</blockquote>
+<p><img src="https://blogimage-1-1313323272.cos.ap-nanjing.myqcloud.com/Img/202209171042460.png" alt="image-20220910191541561"></p>
+<hr>
+<h3 id="9-关系的闭包运算"><a href="#9-关系的闭包运算" class="headerlink" title="9.关系的闭包运算"></a>9.关系的闭包运算</h3><blockquote>
+<p>三种闭包运算也即添加最少序偶元素来让序偶集合符合自反、对称、传递关系的运算</p>
+<p>自反闭包  r(R)</p>
+<p>对称闭包  s(R)</p>
+<p>传递闭包  t(R)</p>
+</blockquote>
+<p><img src="https://blogimage-1-1313323272.cos.ap-nanjing.myqcloud.com/Img/202209171042084.png" alt="image-20220910222459190"></p>
+<hr>
+<p><img src="https://blogimage-1-1313323272.cos.ap-nanjing.myqcloud.com/Img/202209171042884.png" alt="image-20220910222530404"></p>
+<hr>
+<p><img src="https://blogimage-1-1313323272.cos.ap-nanjing.myqcloud.com/Img/202209171042180.png" alt="image-20220910222551227"></p>
+<hr>
+<ul>
+<li>闭包运算的性质</li>
+</ul>
+<p><img src="https://blogimage-1-1313323272.cos.ap-nanjing.myqcloud.com/Img/202209171042279.png" alt="image-20220910223058068"></p>
+<h3 id="10-等价关系"><a href="#10-等价关系" class="headerlink" title="10.等价关系"></a>10.等价关系</h3><h4 id="①等价关系的定义"><a href="#①等价关系的定义" class="headerlink" title="①等价关系的定义"></a>①等价关系的定义</h4><p><img src="https://blogimage-1-1313323272.cos.ap-nanjing.myqcloud.com/Img/202209171042634.png" alt="image-20220910223346216"></p>
+<blockquote>
+<p>满足自反、对称、传递的关系即为等价关系</p>
+</blockquote>
+<hr>
+<h4 id="②等价类的定义"><a href="#②等价类的定义" class="headerlink" title="②等价类的定义"></a>②等价类的定义</h4><blockquote>
+<p>等价类后面的括号里包括自身</p>
+</blockquote>
+<p><img src="https://blogimage-1-1313323272.cos.ap-nanjing.myqcloud.com/Img/202209171042843.png" alt="image-20220910224143000"></p>
+<hr>
+<p><img src="https://blogimage-1-1313323272.cos.ap-nanjing.myqcloud.com/Img/202209171042704.png" alt="image-20220910224218373"></p>
+<hr>
+<h3 id="11-商集"><a href="#11-商集" class="headerlink" title="11.商集"></a>11.商集</h3><h4 id="①商集的定义"><a href="#①商集的定义" class="headerlink" title="①商集的定义"></a>①商集的定义</h4><p><img src="https://blogimage-1-1313323272.cos.ap-nanjing.myqcloud.com/Img/202209171042921.png" alt="image-20220910224750331"></p>
+<blockquote>
+<p>特别的可以记一下A关于&#x3D;&#x3D;恒等关系&#x3D;&#x3D;还有&#x3D;&#x3D;全域关系&#x3D;&#x3D;的商集</p>
+</blockquote>
+<ul>
+<li>&#x3D;&#x3D;不要记错商集是共有的后边的元素而不是等价类&#x3D;&#x3D;<ul>
+<li>&#x3D;&#x3D;也就是满足特定关系的各个划分的集合共同组成一个新的集合&#x3D;&#x3D;</li>
+</ul>
+</li>
+</ul>
+<h4 id="②划分的定义"><a href="#②划分的定义" class="headerlink" title="②划分的定义"></a>②划分的定义</h4><p><img src="https://blogimage-1-1313323272.cos.ap-nanjing.myqcloud.com/Img/202209171042359.png" alt="image-20220910225333427"></p>
+<blockquote>
+<p>特别的，一一对应的商集和划分，对应某等价关系的商集所形成的划分，叫做由该等价关系导出的&#x3D;&#x3D;等价划分&#x3D;&#x3D;</p>
+</blockquote>
+<blockquote>
+<p>由某划分确定的等价关系，称为由该&#x3D;&#x3D;划分所导出的等价关系&#x3D;&#x3D;</p>
+</blockquote>
+<p><img src="https://blogimage-1-1313323272.cos.ap-nanjing.myqcloud.com/Img/202209171042680.png" alt="image-20220910225941529"></p>
+<hr>
+<blockquote>
+<h6 id="通过划分求对应的等价关系"><a href="#通过划分求对应的等价关系" class="headerlink" title="通过划分求对应的等价关系"></a>通过划分求对应的等价关系</h6></blockquote>
+<ul>
+<li><strong>通过划分的各个集合求笛卡尔积之后再求并集，所得结果即为所求等价关系</strong></li>
+</ul>
+<blockquote>
+<h6 id="通过等价关系求对应划分"><a href="#通过等价关系求对应划分" class="headerlink" title="通过等价关系求对应划分"></a>通过等价关系求对应划分</h6></blockquote>
+<ul>
+<li><strong>通过等价类导出对应的商集，所得商集即为所求等价划分</strong></li>
+</ul>
+<p><img src="https://blogimage-1-1313323272.cos.ap-nanjing.myqcloud.com/Img/202209171042557.png" alt="image-20220910230253536"></p>
+<hr>
+<h3 id="12-偏序关系"><a href="#12-偏序关系" class="headerlink" title="12.偏序关系"></a>12.偏序关系</h3><h4 id="①偏序关系的定义"><a href="#①偏序关系的定义" class="headerlink" title="①偏序关系的定义"></a>①偏序关系的定义</h4><blockquote>
+<p>自反的、反对称的、传递的。</p>
+</blockquote>
+<p><img src="https://blogimage-1-1313323272.cos.ap-nanjing.myqcloud.com/Img/202209171042639.png" alt="image-20220910230926778"></p>
+<hr>
+<h4 id="可比与盖住的定义"><a href="#可比与盖住的定义" class="headerlink" title="可比与盖住的定义"></a>可比与盖住的定义</h4><p><img src="https://blogimage-1-1313323272.cos.ap-nanjing.myqcloud.com/Img/202209171042855.png" alt="image-20220910231511841"></p>
+<hr>
+<blockquote>
+<p>X、Y符合关系则为可比的</p>
+<p>不存在中间元素，则为盖住</p>
+</blockquote>
+<hr>
+<h3 id="13-哈斯图和特殊关系"><a href="#13-哈斯图和特殊关系" class="headerlink" title="13.哈斯图和特殊关系"></a>13.哈斯图和特殊关系</h3><h4 id="①哈斯图的定义以及绘制步骤"><a href="#①哈斯图的定义以及绘制步骤" class="headerlink" title="①哈斯图的定义以及绘制步骤"></a>①哈斯图的定义以及绘制步骤</h4><p><img src="https://blogimage-1-1313323272.cos.ap-nanjing.myqcloud.com/Img/202209171042692.png" alt="image-20220911013621530"></p>
+<hr>
+<h4 id="②特殊元素"><a href="#②特殊元素" class="headerlink" title="②特殊元素"></a>②特殊元素</h4><blockquote>
+<h5 id="最大元和最小元"><a href="#最大元和最小元" class="headerlink" title="最大元和最小元"></a>最大元和最小元</h5></blockquote>
+<p><img src="https://blogimage-1-1313323272.cos.ap-nanjing.myqcloud.com/Img/202209171043284.png" alt="image-20220911013853527"></p>
+<hr>
+<blockquote>
+<h5 id="极大元与极小元"><a href="#极大元与极小元" class="headerlink" title="极大元与极小元"></a>极大元与极小元</h5></blockquote>
+<p><img src="https://blogimage-1-1313323272.cos.ap-nanjing.myqcloud.com/Img/202209171043662.png" alt="image-20220911013933027"></p>
+<hr>
+<blockquote>
+<h6 id="总结与分辨"><a href="#总结与分辨" class="headerlink" title="总结与分辨"></a>总结与分辨</h6></blockquote>
+<p><img src="https://blogimage-1-1313323272.cos.ap-nanjing.myqcloud.com/Img/202209171043897.png" alt="image-20220911014029331"></p>
+<hr>
+<blockquote>
+<h5 id="上界与下界"><a href="#上界与下界" class="headerlink" title="上界与下界"></a>上界与下界</h5></blockquote>
+<p><img src="https://blogimage-1-1313323272.cos.ap-nanjing.myqcloud.com/Img/202209171043085.png" alt="image-20220911014210853"></p>
+<hr>
+<blockquote>
+<h5 id="上确界与下确界"><a href="#上确界与下确界" class="headerlink" title="上确界与下确界"></a>上确界与下确界</h5></blockquote>
+<p><img src="https://blogimage-1-1313323272.cos.ap-nanjing.myqcloud.com/Img/202209171043274.png" alt="image-20220911014250363"></p>
+<hr>
+<blockquote>
+<h6 id="总结与分辨-1"><a href="#总结与分辨-1" class="headerlink" title="总结与分辨"></a>总结与分辨</h6></blockquote>
+<p><img src="https://blogimage-1-1313323272.cos.ap-nanjing.myqcloud.com/Img/202209171044630.png" alt="image-20220911014348941"></p>
+<hr>
+<h2 id="第三章-函数"><a href="#第三章-函数" class="headerlink" title="第三章 函数"></a>第三章 函数</h2><h3 id="1-函数的定义"><a href="#1-函数的定义" class="headerlink" title="1.函数的定义"></a>1.函数的定义</h3><h4 id="①函数的定义"><a href="#①函数的定义" class="headerlink" title="①函数的定义"></a>①函数的定义</h4><p><img src="https://blogimage-1-1313323272.cos.ap-nanjing.myqcloud.com/Img/202209171044602.png" alt="image-20220911124923133"></p>
+<hr>
+<h4 id="②函数与关系的区别"><a href="#②函数与关系的区别" class="headerlink" title="②函数与关系的区别"></a>②函数与关系的区别</h4><p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220911125235122.png" alt="image-20220911125235122"></p>
+<hr>
+<h4 id="③函数的特点"><a href="#③函数的特点" class="headerlink" title="③函数的特点"></a>③函数的特点</h4><p><img src="https://blogimage-1-1313323272.cos.ap-nanjing.myqcloud.com/Img/202209171044505.png" alt="image-20220911125411430"></p>
+<hr>
+<h4 id="④函数的数量问题"><a href="#④函数的数量问题" class="headerlink" title="④函数的数量问题"></a>④函数的数量问题</h4><p><img src="https://blogimage-1-1313323272.cos.ap-nanjing.myqcloud.com/Img/202209171044973.png" alt="image-20220911125609952"></p>
+<hr>
+<p><img src="https://blogimage-1-1313323272.cos.ap-nanjing.myqcloud.com/Img/202209171044032.png" alt="image-20220911125643430"></p>
+<hr>
+<h3 id="2-特殊函数"><a href="#2-特殊函数" class="headerlink" title="2.特殊函数"></a>2.特殊函数</h3><h4 id="①特殊函数的分类"><a href="#①特殊函数的分类" class="headerlink" title="①特殊函数的分类"></a>①特殊函数的分类</h4><blockquote>
+<p>单射函数、满射函数、双射函数</p>
+</blockquote>
+<p><img src="https://blogimage-1-1313323272.cos.ap-nanjing.myqcloud.com/Img/202209171044623.png" alt="image-20220911125944512"></p>
+<hr>
+<h4 id="②特殊函数的必要条件"><a href="#②特殊函数的必要条件" class="headerlink" title="②特殊函数的必要条件"></a>②特殊函数的必要条件</h4><p><img src="https://blogimage-1-1313323272.cos.ap-nanjing.myqcloud.com/Img/202209171044713.png" alt="image-20220911130049471"></p>
+<hr>
+<h4 id="③特殊函数的数量"><a href="#③特殊函数的数量" class="headerlink" title="③特殊函数的数量"></a>③特殊函数的数量</h4><p><img src="https://blogimage-1-1313323272.cos.ap-nanjing.myqcloud.com/Img/202209171044615.png" alt="image-20220911130617104"></p>
+<hr>
+<p><img src="https://blogimage-1-1313323272.cos.ap-nanjing.myqcloud.com/Img/202209171044484.png" alt="image-20220911130634418"></p>
+<hr>
+<h3 id="3-函数的运算"><a href="#3-函数的运算" class="headerlink" title="3.函数的运算"></a>3.函数的运算</h3><h4 id="①函数的基本运算"><a href="#①函数的基本运算" class="headerlink" title="①函数的基本运算"></a>①函数的基本运算</h4><blockquote>
+<p>函数是一种&#x3D;&#x3D;特殊的关系&#x3D;&#x3D;，因此关系的所有运算都适用于函数，如，集合的基本运算、关系的复合运算和逆运算等。但运算的结果并不一定都是函数，<strong>如下基本运算就不是函数</strong></p>
+</blockquote>
+<p><img src="https://blogimage-1-1313323272.cos.ap-nanjing.myqcloud.com/Img/202209171044198.png" alt="image-20220911131251957"></p>
+<hr>
+<h4 id="②函数的复合运算"><a href="#②函数的复合运算" class="headerlink" title="②函数的复合运算"></a>②函数的复合运算</h4><blockquote>
+<p>函数是一种特殊的关系，能进行关系的复合运算。函数经复合运算之后仍然是函数。</p>
+</blockquote>
+<p><img src="https://blogimage-1-1313323272.cos.ap-nanjing.myqcloud.com/Img/202209171044944.png" alt="image-20220911131425568"></p>
+<hr>
+<h4 id="③函数复合的性质"><a href="#③函数复合的性质" class="headerlink" title="③函数复合的性质"></a>③函数复合的性质</h4><p><img src="https://blogimage-1-1313323272.cos.ap-nanjing.myqcloud.com/Img/202209171044007.png" alt="image-20220911131655439"></p>
+<hr>
+<h4 id="④逆运算的定义"><a href="#④逆运算的定义" class="headerlink" title="④逆运算的定义"></a>④逆运算的定义</h4><p><img src="https://blogimage-1-1313323272.cos.ap-nanjing.myqcloud.com/Img/202209171044592.png" alt="image-20220911131913196"></p>
+<hr>
+<h4 id="⑤复合函数的实例（洗牌）"><a href="#⑤复合函数的实例（洗牌）" class="headerlink" title="⑤复合函数的实例（洗牌）"></a>⑤复合函数的实例（洗牌）</h4><p>​	</p>
+<p><img src="https://blogimage-1-1313323272.cos.ap-nanjing.myqcloud.com/Img/202209171045207.png" alt="image-20220911132037236"></p>
+<hr>
+<p><img src="https://blogimage-1-1313323272.cos.ap-nanjing.myqcloud.com/Img/202209171045365.png" alt="image-20220911132056561"></p>
+<hr>
+<h4 id="⑥复合函数与逆函数的实例（凯撒密码）"><a href="#⑥复合函数与逆函数的实例（凯撒密码）" class="headerlink" title="⑥复合函数与逆函数的实例（凯撒密码）"></a>⑥复合函数与逆函数的实例（凯撒密码）</h4><p><img src="https://blogimage-1-1313323272.cos.ap-nanjing.myqcloud.com/Img/202209171045165.png" alt="image-20220911132234843"></p>
+<hr>
+<h2 id="第四章-命题逻辑"><a href="#第四章-命题逻辑" class="headerlink" title="第四章 命题逻辑"></a>第四章 命题逻辑</h2><h3 id="1-命题"><a href="#1-命题" class="headerlink" title="1.命题"></a>1.命题</h3><h4 id="①命题的定义"><a href="#①命题的定义" class="headerlink" title="①命题的定义"></a>①命题的定义</h4><p><img src="https://blogimage-1-1313323272.cos.ap-nanjing.myqcloud.com/Img/202209171045220.png" alt="image-20220911132645131"></p>
+<hr>
+<h4 id="②简单命题-x2F-原子命题"><a href="#②简单命题-x2F-原子命题" class="headerlink" title="②简单命题&#x2F;原子命题"></a>②简单命题&#x2F;原子命题</h4><p><img src="https://blogimage-1-1313323272.cos.ap-nanjing.myqcloud.com/Img/202209171045851.png" alt="image-20220911132948768"></p>
+<hr>
+<h4 id="③复合命题"><a href="#③复合命题" class="headerlink" title="③复合命题"></a>③复合命题</h4><p><img src="https://blogimage-1-1313323272.cos.ap-nanjing.myqcloud.com/Img/202209171045515.png" alt="image-20220911133047559"></p>
+<hr>
+<h3 id="2-命题联结词"><a href="#2-命题联结词" class="headerlink" title="2.命题联结词"></a>2.命题联结词</h3><blockquote>
+<p>否定联结词 ¬</p>
+<p>合取联结词 ∧</p>
+<p>析取联结词 ∨</p>
+<p>蕴含联结词 → &#x3D;&#x3D;前真后假方为假&#x3D;&#x3D;</p>
+<p>等价联结词 ↔ &#x3D;&#x3D;同真同假方为真&#x3D;&#x3D;</p>
+<p><img src="https://blogimage-1-1313323272.cos.ap-nanjing.myqcloud.com/Img/202209171045893.png" alt="image-20220911134601133"></p>
+</blockquote>
+<p><img src="https://blogimage-1-1313323272.cos.ap-nanjing.myqcloud.com/Img/202209171045919.png" alt="image-20220911133848023"></p>
+<hr>
+<h3 id="3-命题符号化及其应用"><a href="#3-命题符号化及其应用" class="headerlink" title="3.命题符号化及其应用"></a>3.命题符号化及其应用</h3><ul>
+<li>命题符号化一般分为三个步骤</li>
+</ul>
+<blockquote>
+<p>①简单命题的符号化</p>
+<p>②联结词的符号化</p>
+<p>③“联结”简单命题</p>
+</blockquote>
+<h3 id="4-命题公式和真值表"><a href="#4-命题公式和真值表" class="headerlink" title="4.命题公式和真值表"></a>4.命题公式和真值表</h3><h4 id="①命题常量和命题变元定义"><a href="#①命题常量和命题变元定义" class="headerlink" title="①命题常量和命题变元定义"></a>①命题常量和命题变元定义</h4><p><img src="https://blogimage-1-1313323272.cos.ap-nanjing.myqcloud.com/Img/202209171045494.png" alt="image-20220911134428132"></p>
+<hr>
+<h4 id="②成真赋值和成假赋值"><a href="#②成真赋值和成假赋值" class="headerlink" title="②成真赋值和成假赋值"></a>②成真赋值和成假赋值</h4><p><img src="https://blogimage-1-1313323272.cos.ap-nanjing.myqcloud.com/Img/202209171045970.png" alt="image-20220911134707106"></p>
+<hr>
+<h4 id="③真值表"><a href="#③真值表" class="headerlink" title="③真值表"></a>③真值表</h4><p><img src="https://blogimage-1-1313323272.cos.ap-nanjing.myqcloud.com/Img/202209171045552.png" alt="image-20220911134758587"></p>
+<hr>
+<h3 id="5-命题公式的分类"><a href="#5-命题公式的分类" class="headerlink" title="5.命题公式的分类"></a>5.命题公式的分类</h3><h4 id="①重言式-x2F-永真命题公式"><a href="#①重言式-x2F-永真命题公式" class="headerlink" title="①重言式&#x2F;永真命题公式"></a>①重言式&#x2F;永真命题公式</h4><blockquote>
+<p>任何情况下均为真</p>
+</blockquote>
+<p><img src="https://blogimage-1-1313323272.cos.ap-nanjing.myqcloud.com/Img/202209171045816.png" alt="image-20220911140139368"></p>
+<hr>
+<h4 id="②可满足公式"><a href="#②可满足公式" class="headerlink" title="②可满足公式"></a>②可满足公式</h4><blockquote>
+<p>至少存在一种为真的情况</p>
+<ul>
+<li>重言式是特殊的可满足公式</li>
+</ul>
+</blockquote>
+<p><img src="https://blogimage-1-1313323272.cos.ap-nanjing.myqcloud.com/Img/202209171045062.png" alt="image-20220911140303120"></p>
+<hr>
+<h4 id="③矛盾式-x2F-永假命题公式"><a href="#③矛盾式-x2F-永假命题公式" class="headerlink" title="③矛盾式&#x2F;永假命题公式"></a>③矛盾式&#x2F;永假命题公式</h4><blockquote>
+<p>在任何情况下均为假</p>
+</blockquote>
+<p><img src="https://blogimage-1-1313323272.cos.ap-nanjing.myqcloud.com/Img/202209171045454.png" alt="image-20220911140441783"></p>
+<hr>
+<h3 id="6-命题公式的逻辑等值及应用"><a href="#6-命题公式的逻辑等值及应用" class="headerlink" title="6.命题公式的逻辑等值及应用"></a>6.命题公式的逻辑等值及应用</h3><h4 id="①命题公式的等值式"><a href="#①命题公式的等值式" class="headerlink" title="①命题公式的等值式"></a>①命题公式的等值式</h4><p><img src="https://blogimage-1-1313323272.cos.ap-nanjing.myqcloud.com/Img/202209171045130.png" alt="image-20220911140727900"></p>
+<hr>
+<h4 id="②基本等值式"><a href="#②基本等值式" class="headerlink" title="②基本等值式"></a>②基本等值式</h4><blockquote>
+<p>可以和集合的交并补等操作进行互换</p>
+<p>&#x3D;&#x3D;重点&#x3D;&#x3D;    ⑪~⑯   德摩根律、蕴含等值式、等价等值式、假言易位（逆否）、等价否定等价式（逆否）、归谬论</p>
+</blockquote>
+<p><img src="https://blogimage-1-1313323272.cos.ap-nanjing.myqcloud.com/Img/202209171045828.png" alt="image-20220911142136413"></p>
+<hr>
+<h4 id="③等值演算"><a href="#③等值演算" class="headerlink" title="③等值演算"></a>③等值演算</h4><blockquote>
+<p>&#x3D;&#x3D;<strong>在等值演算的时候要注意符号的优先级，确定好式子的前界和后界</strong>&#x3D;&#x3D;</p>
+<ul>
+<li>同时也要合理使用结合律来简化操作去除括号</li>
+<li>优先级越高越放在最后看，先看优先级低的，将其转化为优先级高的</li>
+</ul>
+</blockquote>
+<p><img src="https://blogimage-1-1313323272.cos.ap-nanjing.myqcloud.com/Img/202209171045397.png" alt="image-20220911152632688"></p>
+<blockquote>
+<p>证明两个公式等值</p>
+</blockquote>
+<p><img src="https://blogimage-1-1313323272.cos.ap-nanjing.myqcloud.com/Img/202209171045320.png" alt="image-20220911145420641"></p>
+<hr>
+<p><img src="https://blogimage-1-1313323272.cos.ap-nanjing.myqcloud.com/Img/202209171045951.png" alt="image-20220911145617869"></p>
+<hr>
+<blockquote>
+<p>简化公式</p>
+</blockquote>
+<p><img src="https://blogimage-1-1313323272.cos.ap-nanjing.myqcloud.com/Img/202209171046056.png" alt="image-20220911151920567"></p>
+<ul>
+<li>也可以再写一步<strong>蕴含等值式</strong>，得出¬p∨r</li>
+</ul>
+<hr>
+<blockquote>
+<p>等值演算也可以用来判断公式的类型：重言式、矛盾式等</p>
+</blockquote>
+<p><img src="https://blogimage-1-1313323272.cos.ap-nanjing.myqcloud.com/Img/202209171046061.png" alt="image-20220911152246039"></p>
+<hr>
+<blockquote>
+<p>示例</p>
+</blockquote>
+<p><img src="https://blogimage-1-1313323272.cos.ap-nanjing.myqcloud.com/Img/202209171046062.png" alt="image-20220911153013539"></p>
+<hr>
+<h3 id="7-范式"><a href="#7-范式" class="headerlink" title="7.范式"></a>7.范式</h3><h4 id="①简单析取式和简单合取式"><a href="#①简单析取式和简单合取式" class="headerlink" title="①简单析取式和简单合取式"></a>①简单析取式和简单合取式</h4><blockquote>
+<p>简单析取式和简单合取式的定义</p>
+</blockquote>
+<p><img src="https://blogimage-1-1313323272.cos.ap-nanjing.myqcloud.com/Img/202209171046697.png" alt="image-20220911153338449"></p>
+<hr>
+<h4 id="②合取范式"><a href="#②合取范式" class="headerlink" title="②合取范式"></a>②合取范式</h4><blockquote>
+<p>合取范式的定义</p>
+</blockquote>
+<p><img src="https://blogimage-1-1313323272.cos.ap-nanjing.myqcloud.com/Img/202209171046072.png" alt="image-20220911153458157"></p>
+<hr>
+<h4 id="③命题公式的范式求解"><a href="#③命题公式的范式求解" class="headerlink" title="③命题公式的范式求解"></a>③命题公式的范式求解</h4><blockquote>
+<p>任何命题公式都存在与之等值的析取范式和合取范式，但是不一定唯一</p>
+<p>重点&#x3D;&#x3D;<strong>蕴涵等值式、等价等值式、双重否定律</strong>&#x3D;&#x3D;</p>
+</blockquote>
+<p><img src="https://blogimage-1-1313323272.cos.ap-nanjing.myqcloud.com/Img/202209171046833.png" alt="image-20220911153733005"></p>
+<hr>
+<blockquote>
+<p>示例</p>
+</blockquote>
+<p><img src="https://blogimage-1-1313323272.cos.ap-nanjing.myqcloud.com/Img/202209171046796.png" alt="image-20220911153914758"></p>
+<hr>
+<h4 id="④命题公式的范式应用"><a href="#④命题公式的范式应用" class="headerlink" title="④命题公式的范式应用"></a>④命题公式的范式应用</h4><blockquote>
+<p>示例例题</p>
+<ul>
+<li>首先把各种能达到齐全功能的选择方案进行合取（这里是根据题意进行操作）来得到原始式子</li>
+<li>之后通过命题公式的规律求解得到<strong>命题范式</strong>，这里是<strong>简单析取式</strong></li>
+<li>其中简单合取式子里面的<strong>每一个命题单元</strong>就是<strong>一个方案</strong></li>
+</ul>
+</blockquote>
+<p><img src="https://blogimage-1-1313323272.cos.ap-nanjing.myqcloud.com/Img/202209171046018.png" alt="image-20220911154959238"></p>
+<hr>
+<h3 id="8-主范式"><a href="#8-主范式" class="headerlink" title="8.主范式"></a>8.主范式</h3><h4 id="①极小项和极大项"><a href="#①极小项和极大项" class="headerlink" title="①极小项和极大项"></a>①极小项和极大项</h4><blockquote>
+<p>简单合取式中，每个命题变元和其否定不同时出现，但是一定要出现一个</p>
+</blockquote>
+<p><img src="https://blogimage-1-1313323272.cos.ap-nanjing.myqcloud.com/Img/202209171046392.png" alt="image-20220911171311250"></p>
+<blockquote>
+<p>n个命题变项可以生成2^n^个极小项和2^n^个极大项。</p>
+</blockquote>
+<hr>
+<blockquote>
+<p>其中，从<strong>（0,0,0）</strong>开始赋值，此时的符号表示为&#x3D;&#x3D;m<del>0</del>&#x3D;&#x3D;    此后依次赋值改为<strong>1</strong>   并向后递推</p>
+</blockquote>
+<p><img src="https://blogimage-1-1313323272.cos.ap-nanjing.myqcloud.com/Img/202209171046471.png" alt="image-20220911172046604"></p>
+<blockquote>
+<p>极大项和极小项的成真赋值和成假赋值，彼此之间进行取非，一一对应，如上图</p>
+</blockquote>
+<hr>
+<h4 id="②极小项和极大项的性质以及对应关系"><a href="#②极小项和极大项的性质以及对应关系" class="headerlink" title="②极小项和极大项的性质以及对应关系"></a>②极小项和极大项的性质以及对应关系</h4><p><img src="https://blogimage-1-1313323272.cos.ap-nanjing.myqcloud.com/Img/202209171046367.png" alt="image-20220911172332885"></p>
+<hr>
+<h4 id="③主析取范式"><a href="#③主析取范式" class="headerlink" title="③主析取范式"></a>③主析取范式</h4><blockquote>
+<p>每个简单合取式之中都要有该命题变元的极小项，也就是<strong>一定</strong>要有某个<strong>命题变元</strong>的<strong>本身</strong>或者<strong>其否定</strong>，&#x3D;&#x3D;但不是同时有，只要有一个，其本身和其否定不能同时出现&#x3D;&#x3D;</p>
+<p>任何命题公式都存在与之等值的唯一主析取范式</p>
+</blockquote>
+<p><img src="https://blogimage-1-1313323272.cos.ap-nanjing.myqcloud.com/Img/202209171046684.png" alt="image-20220911172515082"></p>
+<hr>
+<ul>
+<li><h6 id="主析取范式的求解步骤"><a href="#主析取范式的求解步骤" class="headerlink" title="主析取范式的求解步骤"></a>主析取范式的求解步骤</h6></li>
+</ul>
+<blockquote>
+<p>主要使用排中律进行求解添项</p>
+<p><img src="https://blogimage-1-1313323272.cos.ap-nanjing.myqcloud.com/Img/202209171047372.png" alt="image-20220911173854477"></p>
+</blockquote>
+<p><img src="https://blogimage-1-1313323272.cos.ap-nanjing.myqcloud.com/Img/202209171047183.png" alt="image-20220911172621766"></p>
+<hr>
+<ul>
+<li><h6 id="主析取范式的求解示例"><a href="#主析取范式的求解示例" class="headerlink" title="主析取范式的求解示例"></a>主析取范式的求解示例</h6></li>
+</ul>
+<p><img src="https://blogimage-1-1313323272.cos.ap-nanjing.myqcloud.com/Img/202209171047690.png" alt="image-20220911173425851"></p>
+<hr>
+<h4 id="④主合取范式"><a href="#④主合取范式" class="headerlink" title="④主合取范式"></a>④主合取范式</h4><blockquote>
+<p>每个简单析取式之中都要有该命题变元的极大项，也就是<strong>一定</strong>要有某个<strong>命题变元</strong>的<strong>本身</strong>或者<strong>其否定</strong>，&#x3D;&#x3D;但不是同时有，只要有一个，其本身和其否定不能同时出现&#x3D;&#x3D;</p>
+</blockquote>
+<blockquote>
+<p>任何命题公式都存在与之等值的唯一主合取范式</p>
+</blockquote>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220911173539131.png" alt="image-20220911173539131"></p>
+<hr>
+<ul>
+<li><h6 id="主合取范式的求解步骤"><a href="#主合取范式的求解步骤" class="headerlink" title="主合取范式的求解步骤"></a>主合取范式的求解步骤</h6></li>
+</ul>
+<blockquote>
+<p>主要使用同一律和矛盾律进行求解添项</p>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220911174223532.png" alt="image-20220911174223532"></p>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220911174237483.png" alt="image-20220911174237483"></p>
+</blockquote>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220911174105258.png" alt="image-20220911174105258"></p>
+<hr>
+<ul>
+<li>主合取范式的求解示例</li>
+</ul>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220911174431500.png" alt="image-20220911174431500"></p>
+<hr>
+<blockquote>
+<p>其中符号下标的表示可以参考极小项和极大项的对应表格</p>
+</blockquote>
+<hr>
+<h4 id="⑤主范式相关关系"><a href="#⑤主范式相关关系" class="headerlink" title="⑤主范式相关关系"></a>⑤主范式相关关系</h4><p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220911175217847.png" alt="image-20220911175217847"></p>
+<hr>
+<blockquote>
+<p>如题，可以发现主合取范式的符号表示正好和主析取范式的符号表示在0~7之间互补，因此可以复习一下之前的知识点</p>
+<ul>
+<li>主范式的<strong>符号表示</strong>（m<del>0</del>）对应的极小元（命题公式pVqVr）根据命题单元的个数n决定数量，其个数为2^n^</li>
+<li>主析取范式使用小写m<del>0</del>表示，主合取范式使用大写M<del>0</del>表示</li>
+<li>主析取范式的下标和主合取范式的下标在<strong>0~2^n^-1</strong>范围内互补^(？)^</li>
+<li>(?)的原因是：极大项和极小项的成真赋值和成假赋值，彼此之间进行取非，一一对应，可以参考<strong>四.8.①</strong>表格，详细证明见下</li>
+</ul>
+</blockquote>
+<hr>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220911180117009.png" alt="image-20220911180117009"></p>
+<hr>
+<h4 id="⑥主范式的作用"><a href="#⑥主范式的作用" class="headerlink" title="⑥主范式的作用"></a>⑥主范式的作用</h4><blockquote>
+<ul>
+<li><h6 id="通过求解主析取范式和主合取范式可以统一表示某个问题的表达，因为其具有唯一的主范式，通过此唯一的主范式可以求出其对应的成真赋值和成假赋值"><a href="#通过求解主析取范式和主合取范式可以统一表示某个问题的表达，因为其具有唯一的主范式，通过此唯一的主范式可以求出其对应的成真赋值和成假赋值" class="headerlink" title="通过求解主析取范式和主合取范式可以统一表示某个问题的表达，因为其具有唯一的主范式，通过此唯一的主范式可以求出其对应的成真赋值和成假赋值"></a>通过求解主析取范式和主合取范式可以统一表示某个问题的表达，因为其具有唯一的主范式，通过此唯一的主范式可以求出其对应的成真赋值和成假赋值</h6></li>
+<li><h6 id="因此可以判断命题公式的类型：重言式、矛盾式、非永真式的可满足式"><a href="#因此可以判断命题公式的类型：重言式、矛盾式、非永真式的可满足式" class="headerlink" title="因此可以判断命题公式的类型：重言式、矛盾式、非永真式的可满足式"></a>因此可以判断命题公式的类型：重言式、矛盾式、非永真式的可满足式</h6></li>
+<li><h6 id="判断命题公式是否等值：当且仅当其具有相同的主析取范式-x2F-主合取范式"><a href="#判断命题公式是否等值：当且仅当其具有相同的主析取范式-x2F-主合取范式" class="headerlink" title="判断命题公式是否等值：当且仅当其具有相同的主析取范式&#x2F;主合取范式"></a>判断命题公式是否等值：当且仅当其具有相同的主析取范式&#x2F;主合取范式</h6></li>
+<li><h6 id="因此也便于计算机求解相关问题"><a href="#因此也便于计算机求解相关问题" class="headerlink" title="因此也便于计算机求解相关问题"></a>因此也便于计算机求解相关问题</h6></li>
+</ul>
+</blockquote>
+<hr>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220911180955032.png" alt="image-20220911180955032"></p>
+<hr>
+<blockquote>
+<h6 id="简记："><a href="#简记：" class="headerlink" title="简记："></a>简记：</h6><ul>
+<li><p>小m全有为重言式&#x2F;永真式</p>
+</li>
+<li><p>大M全有为矛盾式</p>
+</li>
+<li><p>只有一部分则非永真式的可满足式</p>
+</li>
+</ul>
+</blockquote>
+<hr>
+<h4 id="⑦主范式的实际应用"><a href="#⑦主范式的实际应用" class="headerlink" title="⑦主范式的实际应用"></a>⑦主范式的实际应用</h4><blockquote>
+<p>派人问题</p>
+</blockquote>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220911181812335.png" alt="image-20220911181812335"></p>
+<h3 id="9-简单证明推理"><a href="#9-简单证明推理" class="headerlink" title="9.简单证明推理"></a>9.简单证明推理</h3><h4 id="①推理的基本形式定义"><a href="#①推理的基本形式定义" class="headerlink" title="①推理的基本形式定义"></a>①推理的基本形式定义</h4><p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220911185947387.png" alt="image-20220911185947387"></p>
+<hr>
+<h4 id="②永真-x2F-重言蕴含式的定理及定义"><a href="#②永真-x2F-重言蕴含式的定理及定义" class="headerlink" title="②永真&#x2F;重言蕴含式的定理及定义"></a>②永真&#x2F;重言蕴含式的定理及定义</h4><p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220911205152002.png" alt="image-20220911205152002"></p>
+<hr>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220911205611346.png" alt="image-20220911205611346"></p>
+<hr>
+<h4 id="③简单证明推理例题"><a href="#③简单证明推理例题" class="headerlink" title="③简单证明推理例题"></a>③简单证明推理例题</h4><p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220911205814528.png" alt="image-20220911205814528"></p>
+<hr>
+<blockquote>
+<p>如上例题，将所有前提以及结论使用命题公式表示出来，再进行交集操作，因为要保证这些要同时成立</p>
+</blockquote>
+<blockquote>
+<p>之后解法有三：</p>
+<p>①利用等值演算</p>
+<p>②利用主析取范式和主合取范式</p>
+<p>③利用真值表</p>
+</blockquote>
+<hr>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220911210515530.png" alt="image-20220911210515530"></p>
+<hr>
+<h3 id="10-构造证明推理"><a href="#10-构造证明推理" class="headerlink" title="10.构造证明推理"></a>10.构造证明推理</h3><blockquote>
+<p>引言</p>
+</blockquote>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220911210924444.png" alt="image-20220911210924444"></p>
+<hr>
+<h4 id="①构造证明推理定义"><a href="#①构造证明推理定义" class="headerlink" title="①构造证明推理定义"></a>①构造证明推理定义</h4><blockquote>
+<p>基于<strong>永真蕴含式</strong>或<strong>推理规则</strong>进行的命题公式的推理称为<strong>构造证明推理</strong></p>
+</blockquote>
+<h4 id="②构造证明推理规则"><a href="#②构造证明推理规则" class="headerlink" title="②构造证明推理规则"></a>②构造证明推理规则</h4><hr>
+<blockquote>
+<p>&#x3D;&#x3D;重点记忆&#x3D;&#x3D;</p>
+</blockquote>
+<hr>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220911211212881.png" alt="image-20220911211212881"></p>
+<hr>
+<h4 id="③置换规则"><a href="#③置换规则" class="headerlink" title="③置换规则"></a>③置换规则</h4><blockquote>
+<p><strong>①前提引入规则:在证明的任何步骤上，都可以引入前提</strong><br><strong>②结论引入规则:在推理中，若一个或一组前提已证出结论B，则B可引入到以后的推理中作为前提使用。</strong><br><strong>③置换规则:在推理过程的任何步骤上，命题公式中的任何命题公式都可以用与之等值的命题公式置换。</strong></p>
+</blockquote>
+<hr>
+<h4 id="④直接构造证明推理"><a href="#④直接构造证明推理" class="headerlink" title="④直接构造证明推理"></a>④直接构造证明推理</h4><p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220911212801964.png" alt="image-20220911212801964"></p>
+<hr>
+<h4 id="⑤间接构造证明推理"><a href="#⑤间接构造证明推理" class="headerlink" title="⑤间接构造证明推理"></a>⑤间接构造证明推理</h4><hr>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220911213149091.png" alt="image-20220911213149091"></p>
+<hr>
+<blockquote>
+<p>也就是将所求结论的前界加入到前提之中形成析取命题公式，之后继续推导结论的后界为真即可</p>
+</blockquote>
+<hr>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220911213343238.png" alt="image-20220911213343238"></p>
+<hr>
+<blockquote>
+<h6 id="除上述两种方法之外，还可以使用归谬法来证明原命题的正确性，也即把结论取反，然后和前提进行等值演算得出其结果为0（假）"><a href="#除上述两种方法之外，还可以使用归谬法来证明原命题的正确性，也即把结论取反，然后和前提进行等值演算得出其结果为0（假）" class="headerlink" title="除上述两种方法之外，还可以使用归谬法来证明原命题的正确性，也即把结论取反，然后和前提进行等值演算得出其结果为0（假）"></a>除上述两种方法之外，还可以使用归谬法来证明原命题的正确性，也即把结论取反，然后和前提进行等值演算得出其结果为0（假）</h6></blockquote>
+<hr>
+<h2 id="第五章-谓词逻辑"><a href="#第五章-谓词逻辑" class="headerlink" title="第五章 谓词逻辑"></a>第五章 谓词逻辑</h2><h3 id="1-谓词逻辑的基本概念"><a href="#1-谓词逻辑的基本概念" class="headerlink" title="1.谓词逻辑的基本概念"></a>1.谓词逻辑的基本概念</h3><h4 id="①个体词的定义"><a href="#①个体词的定义" class="headerlink" title="①个体词的定义"></a>①个体词的定义</h4><blockquote>
+<p>个体词→个体常量、个体变量   </p>
+<p>个体域→全总域</p>
+</blockquote>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220911223127225.png" alt="image-20220911223127225"></p>
+<hr>
+<h4 id="②谓词定义"><a href="#②谓词定义" class="headerlink" title="②谓词定义"></a>②谓词定义</h4><blockquote>
+<p>谓词常量</p>
+<p>谓词变量</p>
+<p>n元谓词，特殊的有0元谓词</p>
+</blockquote>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220911223421093.png" alt="image-20220911223421093"></p>
+<hr>
+<ul>
+<li><h5 id="谓词的使用示例"><a href="#谓词的使用示例" class="headerlink" title="谓词的使用示例"></a>谓词的使用示例</h5></li>
+</ul>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220911223624836.png" alt="image-20220911223624836"></p>
+<hr>
+<h4 id="③函词"><a href="#③函词" class="headerlink" title="③函词"></a>③函词</h4><blockquote>
+<p>函词的定义</p>
+</blockquote>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220911224438413.png" alt="image-20220911224438413"></p>
+<hr>
+<blockquote>
+<p>函词就是一般意义下的函数，n元函词就是n元函数，只不过<strong>函词</strong>的<strong>定义域</strong>为&#x3D;&#x3D;个体域的笛卡尔积&#x3D;&#x3D;，<strong>函词</strong>的<strong>值域</strong>为&#x3D;&#x3D;个体域&#x3D;&#x3D;</p>
+<p>值得注意的是：n元谓词也是一个n元函数，其区别在于：前者的值域为<strong>0和1</strong>，而后者的值域为<strong>个体域</strong></p>
+</blockquote>
+<ul>
+<li><h6 id="函词和谓词的区别："><a href="#函词和谓词的区别：" class="headerlink" title="函词和谓词的区别："></a>函词和谓词的区别：</h6></li>
+</ul>
+<blockquote>
+<p>函词使用小写，谓词使用大写</p>
+<p>函词是映射，谓词表示特定的性质或者关系</p>
+<p>函词通常是&#x3D;&#x3D;是什么&#x3D;&#x3D;，谓词通常是&#x3D;&#x3D;的什么&#x3D;&#x3D;或者&#x3D;&#x3D;在……北方&#x3D;&#x3D;之类的</p>
+</blockquote>
+<h4 id="④量词"><a href="#④量词" class="headerlink" title="④量词"></a>④量词</h4><h6 id="一、全称量词"><a href="#一、全称量词" class="headerlink" title="一、全称量词"></a>一、全称量词</h6><p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220911225145929.png" alt="image-20220911225145929"></p>
+<hr>
+<h6 id="二、存在量词"><a href="#二、存在量词" class="headerlink" title="二、存在量词"></a>二、存在量词</h6><p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220911225245778.png" alt="image-20220911225245778"></p>
+<hr>
+<h3 id="2-谓词符号化"><a href="#2-谓词符号化" class="headerlink" title="2.谓词符号化"></a>2.谓词符号化</h3><h4 id="①谓词符号化的常用规则"><a href="#①谓词符号化的常用规则" class="headerlink" title="①谓词符号化的常用规则"></a>①谓词符号化的常用规则</h4><p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220911225447840.png" alt="image-20220911225447840"></p>
+<hr>
+<h4 id="②谓词符号化应用（机器人移盒子问题）"><a href="#②谓词符号化应用（机器人移盒子问题）" class="headerlink" title="②谓词符号化应用（机器人移盒子问题）"></a>②谓词符号化应用（机器人移盒子问题）</h4><p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220911225615726.png" alt="image-20220911225615726"></p>
+<hr>
+<h3 id="3-谓词公式"><a href="#3-谓词公式" class="headerlink" title="3.谓词公式"></a>3.谓词公式</h3><h4 id="①项"><a href="#①项" class="headerlink" title="①项"></a>①项</h4><blockquote>
+<p>项的定义</p>
+</blockquote>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220911225751497.png" alt="image-20220911225751497"></p>
+<hr>
+<h4 id="②原子谓词公式"><a href="#②原子谓词公式" class="headerlink" title="②原子谓词公式"></a>②原子谓词公式</h4><blockquote>
+<p>可以类比<strong>简单公式&#x2F;原子公式</strong></p>
+</blockquote>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220911232745285.png" alt="image-20220911232745285"></p>
+<hr>
+<h4 id="③谓词逻辑公式"><a href="#③谓词逻辑公式" class="headerlink" title="③谓词逻辑公式"></a>③谓词逻辑公式</h4><p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220911233106683.png" alt="image-20220911233106683"></p>
+<hr>
+<h4 id="④约束变元和自由变元"><a href="#④约束变元和自由变元" class="headerlink" title="④约束变元和自由变元"></a>④约束变元和自由变元</h4><blockquote>
+<p>辖域&#x2F;作用域&#x2F;约束域、作用变元&#x2F;指导变元、约束出现&#x2F;约束变元、自由出现&#x2F;自由变元</p>
+</blockquote>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220911233610910.png" alt="image-20220911233610910"></p>
+<hr>
+<ul>
+<li><h6 id="约束变元和自由变元示例"><a href="#约束变元和自由变元示例" class="headerlink" title="约束变元和自由变元示例"></a>约束变元和自由变元示例</h6></li>
+</ul>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220911233742587.png" alt="image-20220911233742587"></p>
+<hr>
+<blockquote>
+<p>在不造成公式冲突的情况下，可以更改一个或者多个变元的符号</p>
+<p>这样可以使原得公式更为清晰明了</p>
+</blockquote>
+<hr>
+<h3 id="4-谓词公式的解释和分类"><a href="#4-谓词公式的解释和分类" class="headerlink" title="4.谓词公式的解释和分类"></a>4.谓词公式的解释和分类</h3><h4 id="①谓词公式的解释定义"><a href="#①谓词公式的解释定义" class="headerlink" title="①谓词公式的解释定义"></a>①谓词公式的解释定义</h4><p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220911234623227.png" alt="image-20220911234623227"></p>
+<hr>
+<blockquote>
+<p>示例</p>
+</blockquote>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220911234647719.png" alt="image-20220911234647719"></p>
+<hr>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220911234735601.png" alt="image-20220911234735601"></p>
+<hr>
+<blockquote>
+<h6 id="由此可见，根据不同的解释，谓词公式在其解释下的取值有所不同，这里可以类比第四章的命题公式的成真、成假赋值"><a href="#由此可见，根据不同的解释，谓词公式在其解释下的取值有所不同，这里可以类比第四章的命题公式的成真、成假赋值" class="headerlink" title="由此可见，根据不同的解释，谓词公式在其解释下的取值有所不同，这里可以类比第四章的命题公式的成真、成假赋值"></a>由此可见，根据不同的解释，谓词公式在其解释下的取值有所不同，这里可以类比第四章的命题公式的成真、成假赋值</h6></blockquote>
+<h4 id="②谓词公式的分类"><a href="#②谓词公式的分类" class="headerlink" title="②谓词公式的分类"></a>②谓词公式的分类</h4><blockquote>
+<p>永真谓词公式、可满足谓词公式、永假谓词公式</p>
+</blockquote>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220911235014785.png" alt="image-20220911235014785"></p>
+<hr>
+<blockquote>
+<p>在谓词逻辑中，谓词公式的解释依赖于个体域，导致了真值表法在判断一个谓词公式的类型时很难实施。</p>
+</blockquote>
+<hr>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220911235304812.png" alt="image-20220911235304812"></p>
+<hr>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220911235322458.png" alt="image-20220911235322458"></p>
+<hr>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220911235350258.png" alt="image-20220911235350258"></p>
+<hr>
+<h3 id="5-谓词公式的逻辑等值"><a href="#5-谓词公式的逻辑等值" class="headerlink" title="5.谓词公式的逻辑等值"></a>5.谓词公式的逻辑等值</h3><h4 id="①谓词公式的等值式"><a href="#①谓词公式的等值式" class="headerlink" title="①谓词公式的等值式"></a>①谓词公式的等值式</h4><p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220912000502339.png" alt="image-20220912000502339"></p>
+<hr>
+<h4 id="②谓词公式的代换实例"><a href="#②谓词公式的代换实例" class="headerlink" title="②谓词公式的代换实例"></a>②谓词公式的代换实例</h4><blockquote>
+<p>通过使用<strong>谓词公式</strong>代换<strong>命题变元</strong>所得到的<strong>谓词公式</strong>称为其对应的一个<strong>代换实例</strong></p>
+<p>注：<strong>可满足公式的代换实例不一定是可满足式</strong></p>
+</blockquote>
+<hr>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220912001128831.png" alt="image-20220912001128831"></p>
+<hr>
+<h4 id="③命题逻辑等值式的推广"><a href="#③命题逻辑等值式的推广" class="headerlink" title="③命题逻辑等值式的推广"></a>③命题逻辑等值式的推广</h4><p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220912001343245.png" alt="image-20220912001343245"></p>
+<blockquote>
+<p>注意这里的全称量词和存在量词要保持一致</p>
+<p>注意这里的A(x)里面的x为自由变元，因为要保证其确定性，所以取任何值不能影响其结果，不能只在一部分情况下适用</p>
+</blockquote>
+<hr>
+<h4 id="⑤量词消去律"><a href="#⑤量词消去律" class="headerlink" title="⑤量词消去律"></a>⑤量词消去律</h4><blockquote>
+<p>全称量词也就是对任意的个体变元都适用，在这里我们使用交集</p>
+<p>存在量词也就是存在一个个体变元使用，在这里我们使用并集</p>
+<p>注意在这里量词的顺序很重要，顺序不同结果不同，因此并不能随意的调换</p>
+<p>A(x)是谓词公式，并不要简单的理解为原子谓词公式</p>
+</blockquote>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220912002117385.png" alt="image-20220912002117385"></p>
+<hr>
+<ul>
+<li><h6 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h6></li>
+</ul>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220912002611896.png" alt="image-20220912002611896"></p>
+<hr>
+<h4 id="⑥量词与否定的交换律"><a href="#⑥量词与否定的交换律" class="headerlink" title="⑥量词与否定的交换律"></a>⑥量词与否定的交换律</h4><blockquote>
+<p>也就是量词和否定转换之后，量词的全称和存在属性要改变</p>
+</blockquote>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220912002722345.png" alt="image-20220912002722345"></p>
+<hr>
+<h4 id="⑦量词辖域收缩与扩张律"><a href="#⑦量词辖域收缩与扩张律" class="headerlink" title="⑦量词辖域收缩与扩张律"></a>⑦量词辖域收缩与扩张律</h4><blockquote>
+<p>就是贴一块儿而已，简单，感觉没必要记，但是还是写一下</p>
+</blockquote>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220912003518206.png" alt="image-20220912003518206"></p>
+<hr>
+<h4 id="⑧量词分配律和双量词交换律"><a href="#⑧量词分配律和双量词交换律" class="headerlink" title="⑧量词分配律和双量词交换律"></a>⑧量词分配律和双量词交换律</h4><blockquote>
+<p>注意第三、四条的X和Y的变化</p>
+</blockquote>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220912003756370.png" alt="image-20220912003756370"></p>
+<hr>
+<ul>
+<li><h6 id="例题示例"><a href="#例题示例" class="headerlink" title="例题示例"></a>例题示例</h6></li>
+</ul>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220912004616829.png" alt="image-20220912004616829"></p>
+<hr>
+<h3 id="6-前束范式"><a href="#6-前束范式" class="headerlink" title="6.前束范式"></a>6.前束范式</h3><h4 id="①前束范式的定义"><a href="#①前束范式的定义" class="headerlink" title="①前束范式的定义"></a>①前束范式的定义</h4><blockquote>
+<p>前束范式、母式</p>
+</blockquote>
+<blockquote>
+<p>前束范式可以类比前面的主范式，但是是两个完全不同的东西，互通的方面也不是很多</p>
+</blockquote>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220912005146129.png" alt="image-20220912005146129"></p>
+<hr>
+<blockquote>
+<p>任何谓词公式都存在与之等值的前束范式，但是并不唯一，因为前面的量词位置可以不同，约束变元的表达形式也可以不同</p>
+</blockquote>
+<hr>
+<h4 id="②前束范式的求法原理"><a href="#②前束范式的求法原理" class="headerlink" title="②前束范式的求法原理"></a>②前束范式的求法原理</h4><p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220912005527214.png" alt="image-20220912005527214"></p>
+<hr>
+<ul>
+<li><h6 id="示例-1"><a href="#示例-1" class="headerlink" title="示例"></a>示例</h6></li>
+</ul>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220912005855308.png" alt="image-20220912005855308"></p>
+<hr>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220912010006381.png" alt="image-20220912010006381"></p>
+<hr>
+<h3 id="7-谓词逻辑推理"><a href="#7-谓词逻辑推理" class="headerlink" title="7.谓词逻辑推理"></a>7.谓词逻辑推理</h3><blockquote>
+<p>在谓词逻辑中，谓词公式的推理依赖于个体域，求解谓词公式在各种解释下的真值往往非常繁琐，甚至异常困难</p>
+<p>这就导致了命题逻辑中的简单证明推理在谓词逻辑中不容易实施</p>
+<p>在谓词逻辑中的推理通常是基于永真蕴含式或构造逻辑推理</p>
+</blockquote>
+<hr>
+<h4 id="①谓词逻辑推理的基本形式"><a href="#①谓词逻辑推理的基本形式" class="headerlink" title="①谓词逻辑推理的基本形式"></a>①谓词逻辑推理的基本形式</h4><blockquote>
+<p>可以类比命题逻辑推理的基本形式</p>
+</blockquote>
+<hr>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220912010851848.png" alt="image-20220912010851848"></p>
+<hr>
+<h4 id="②简单证明推理"><a href="#②简单证明推理" class="headerlink" title="②简单证明推理"></a>②简单证明推理</h4><blockquote>
+<p>可以转换为<strong>重言式</strong>的证明或者<strong>矛盾式</strong>的证明</p>
+<p><strong>矛盾式</strong>也就是将&#x3D;&#x3D;重言式的蕴含式&#x3D;&#x3D;使用蕴涵等值式之后将左侧的&#x3D;&#x3D;非&#x3D;&#x3D;再进行代入，如下图</p>
+</blockquote>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220912010951676.png" alt="image-20220912010951676"></p>
+<hr>
+<blockquote>
+<p>也可以代入实例</p>
+</blockquote>
+<hr>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220912011258032.png" alt="image-20220912011258032"></p>
+<hr>
+<blockquote>
+<p>命题逻辑中的推理规则也可用在谓词逻辑的构造证明推理中。</p>
+</blockquote>
+<hr>
+<h4 id="③构造证明推理规则"><a href="#③构造证明推理规则" class="headerlink" title="③构造证明推理规则"></a>③构造证明推理规则</h4><blockquote>
+<p>构造证明推理可以有效解决苏格拉底假言三段论的问题 </p>
+</blockquote>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220912011411995.png" alt="image-20220912011411995"></p>
+<hr>
+<blockquote>
+<p>以下为多出来的有关量词的消去规则</p>
+<p><strong>注意</strong>：约束变元的限制条件</p>
+</blockquote>
+<blockquote>
+<p>选择一个常数a进行代入就可以</p>
+<h5 id="US规则"><a href="#US规则" class="headerlink" title="US规则"></a>US规则</h5><h5 id="UG规则"><a href="#UG规则" class="headerlink" title="UG规则"></a>UG规则</h5><p>同样选择一个常数a代入就可以</p>
+<h5 id="ES规则"><a href="#ES规则" class="headerlink" title="ES规则"></a>ES规则</h5><h5 id="EG规则"><a href="#EG规则" class="headerlink" title="EG规则"></a>EG规则</h5></blockquote>
+<hr>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220912011549054.png" alt="image-20220912011549054"></p>
+<hr>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220912011627624.png" alt="image-20220912011627624"></p>
+<hr>
+<ul>
+<li><h6 id="示例-2"><a href="#示例-2" class="headerlink" title="示例"></a>示例</h6></li>
+</ul>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220912012310181.png" alt="image-20220912012310181"></p>
+<hr>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220912012330948.png" alt="image-20220912012330948"></p>
+<hr>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220912012838287.png" alt="image-20220912012838287"></p>
+<hr>
+<blockquote>
+<p>不能交换的原因：③是由②所得来的，是存在量词，③具有特殊性，而④是由①推导来的，是全称量词，④具有一般性</p>
+<p>特殊可以满足一般，但是一般不一定满足特殊，而<strong>c</strong>又已经确定为同一个，因此该顺序不能交换</p>
+</blockquote>
+<hr>
+<h4 id="④附加前提证明法"><a href="#④附加前提证明法" class="headerlink" title="④附加前提证明法"></a>④附加前提证明法</h4><blockquote>
+<p>在谓词逻辑的推理中，如果结论是以蕴含式形式给出，则蕴含式的前件可作为推理的前提使用。</p>
+</blockquote>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220912013315247.png" alt="image-20220912013315247"></p>
+<hr>
+<ul>
+<li><h6 id="例题示例-1"><a href="#例题示例-1" class="headerlink" title="例题示例"></a>例题示例</h6></li>
+</ul>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220912013403017.png" alt="image-20220912013403017"></p>
+<hr>
+<h4 id="⑤反证法-x2F-归谬法"><a href="#⑤反证法-x2F-归谬法" class="headerlink" title="⑤反证法&#x2F;归谬法"></a>⑤反证法&#x2F;归谬法</h4><blockquote>
+<p>结论的否定引入</p>
+</blockquote>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220912013501864.png" alt="image-20220912013501864"></p>
+<hr>
+<ul>
+<li><h6 id="示例例题"><a href="#示例例题" class="headerlink" title="示例例题"></a>示例例题</h6></li>
+</ul>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220912013544101.png" alt="image-20220912013544101"></p>
+<hr>
+<hr>
+<hr>
+<ul>
+<li><h1 id="上下册分分界线"><a href="#上下册分分界线" class="headerlink" title="上下册分分界线"></a>上下册分分界线</h1></li>
+</ul>
+<hr>
+<hr>
+<hr>
+<h2 id="第六章-代数系统"><a href="#第六章-代数系统" class="headerlink" title="第六章 代数系统"></a>第六章 代数系统</h2><h3 id="1-代数系统的基本概念"><a href="#1-代数系统的基本概念" class="headerlink" title="1.代数系统的基本概念"></a>1.代数系统的基本概念</h3><h4 id="①代数运算的定义及其性质"><a href="#①代数运算的定义及其性质" class="headerlink" title="①代数运算的定义及其性质"></a>①代数运算的定义及其性质</h4><blockquote>
+<p>唯一性、全域性、&#x3D;&#x3D;封闭性&#x3D;&#x3D;</p>
+</blockquote>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220912144936652.png" alt="image-20220912144936652"></p>
+<hr>
+<ul>
+<li><h6 id="代数运算的判断示例"><a href="#代数运算的判断示例" class="headerlink" title="代数运算的判断示例"></a>代数运算的判断示例</h6></li>
+</ul>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220912145107535.png" alt="image-20220912145107535"></p>
+<hr>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220912145133702.png" alt="image-20220912145133702"></p>
+<blockquote>
+<p>模K加法</p>
+</blockquote>
+<hr>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220912145747373.png" alt="image-20220912145747373"></p>
+<blockquote>
+<p>模K乘法</p>
+</blockquote>
+<hr>
+<h4 id="②运算表"><a href="#②运算表" class="headerlink" title="②运算表"></a>②运算表</h4><p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220912151117962.png" alt="image-20220912151117962"></p>
+<hr>
+<h4 id="③代数系统的定义"><a href="#③代数系统的定义" class="headerlink" title="③代数系统的定义"></a>③代数系统的定义</h4><p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220912151218375.png" alt="image-20220912151218375"></p>
+<hr>
+<h4 id="④子代数系统的定义"><a href="#④子代数系统的定义" class="headerlink" title="④子代数系统的定义"></a>④子代数系统的定义</h4><p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220912151427447.png" alt="image-20220912151427447"></p>
+<hr>
+<ul>
+<li><h6 id="示例及其证明"><a href="#示例及其证明" class="headerlink" title="示例及其证明"></a>示例及其证明</h6></li>
+</ul>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220912151553317.png" alt="image-20220912151553317"></p>
+<hr>
+<h3 id="2-代数运算的基本性质"><a href="#2-代数运算的基本性质" class="headerlink" title="2.代数运算的基本性质"></a>2.代数运算的基本性质</h3><blockquote>
+<p>交换律、结合律、分配律</p>
+</blockquote>
+<hr>
+<h4 id="①交换律"><a href="#①交换律" class="headerlink" title="①交换律"></a>①交换律</h4><blockquote>
+<p>是否满足交换律也可以通过看运算表是否对称的方式来判断</p>
+</blockquote>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220912151939905.png" alt="image-20220912151939905"></p>
+<hr>
+<h4 id="②结合律"><a href="#②结合律" class="headerlink" title="②结合律"></a>②结合律</h4><p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220912152116376.png" alt="image-20220912152116376"></p>
+<hr>
+<h4 id="③分配律"><a href="#③分配律" class="headerlink" title="③分配律"></a>③分配律</h4><blockquote>
+<p>注意区分左可分配、右可分配</p>
+</blockquote>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220912155005439.png" alt="image-20220912155005439"></p>
+<hr>
+<h4 id="④幂运算的定义"><a href="#④幂运算的定义" class="headerlink" title="④幂运算的定义"></a>④幂运算的定义</h4><blockquote>
+<p>注意其中示例的运算方法，要根据具体的代数系统来进行操作</p>
+</blockquote>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220912154817518.png" alt="image-20220912154817518"></p>
+<hr>
+<ul>
+<li><h6 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h6></li>
+</ul>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220912160414248.png" alt="image-20220912160414248"></p>
+<hr>
+<h3 id="3-代数运算的吸收律性质"><a href="#3-代数运算的吸收律性质" class="headerlink" title="3.代数运算的吸收律性质"></a>3.代数运算的吸收律性质</h3><blockquote>
+<p>问题引入：如何像交并、析取合取一样抽象表述代数运算的吸收律</p>
+<p>吸收律简记：括号内外的运算不同，而括号外有和括号内相同的部分，则不同的部分（B）被吸收，只留下相同的部分（A）</p>
+<p>在运算系统中，还要注意其左右位置</p>
+</blockquote>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220912161900294.png" alt="image-20220912161900294"></p>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220912161415017.png" alt="image-20220912161415017"></p>
+<hr>
+<blockquote>
+<p>这里的*和Δ仅仅表示二元运算</p>
+</blockquote>
+<hr>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220912162433974.png" alt="image-20220912162433974"></p>
+<blockquote>
+<p><strong>这里说&#x3D;&#x3D;<em>&#x3D;&#x3D;对&#x3D;&#x3D;Δ&#x3D;&#x3D;是左可吸收的，也就是指&#x3D;&#x3D;</em>&#x3D;&#x3D;是在括号的外面，而&#x3D;&#x3D;Δ&#x3D;&#x3D;在括号的里面，同理可得右可吸收的</strong></p>
+</blockquote>
+<hr>
+<ul>
+<li><h6 id="实例-1"><a href="#实例-1" class="headerlink" title="实例"></a>实例</h6></li>
+</ul>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220912162844332.png" alt="image-20220912162844332"></p>
+<hr>
+<h3 id="4-代数运算的幂等律和消去律"><a href="#4-代数运算的幂等律和消去律" class="headerlink" title="4.代数运算的幂等律和消去律"></a>4.代数运算的幂等律和消去律</h3><h4 id="①幂等律定义"><a href="#①幂等律定义" class="headerlink" title="①幂等律定义"></a>①幂等律定义</h4><blockquote>
+<p>也就是二元运算作用于个体域中的每一个对象之后，结果还是它本身，那就符合幂等律</p>
+</blockquote>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220912163223394.png" alt="image-20220912163223394"></p>
+<hr>
+<h4 id="②消去律定义"><a href="#②消去律定义" class="headerlink" title="②消去律定义"></a>②消去律定义</h4><blockquote>
+<p>也就是等式相同可以推到得出等式同项相消除，留下来的部分相等</p>
+</blockquote>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220912163524553.png" alt="image-20220912163524553"></p>
+<hr>
+<ul>
+<li><h6 id="示例-3"><a href="#示例-3" class="headerlink" title="示例"></a>示例</h6></li>
+</ul>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220912163824540.png" alt="image-20220912163824540"></p>
+<hr>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220912164129954.png" alt="image-20220912164129954"></p>
+<hr>
+<h3 id="5-代数运算的特殊元素"><a href="#5-代数运算的特殊元素" class="headerlink" title="5.代数运算的特殊元素"></a>5.代数运算的特殊元素</h3><h4 id="①等幂元"><a href="#①等幂元" class="headerlink" title="①等幂元"></a>①等幂元</h4><blockquote>
+<p>在某个代数系统中，某个元素通过代数运算之后，结果还等于它自身，则该元素就是关于该运算的等幂元</p>
+</blockquote>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220912164444984.png" alt="image-20220912164444984"></p>
+<hr>
+<ul>
+<li><h6 id="示例-4"><a href="#示例-4" class="headerlink" title="示例"></a>示例</h6></li>
+</ul>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220912164615647.png" alt="image-20220912164615647"></p>
+<hr>
+<h4 id="②零元"><a href="#②零元" class="headerlink" title="②零元"></a>②零元</h4><blockquote>
+<p>任何元素和一个特定元素进行二元运算之后的结果始终等于该特殊元素，则该特殊元素称为零元</p>
+<p>零元也有左右之分</p>
+<p>零元必为等幂元</p>
+</blockquote>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220912164721102.png" alt="image-20220912164721102"></p>
+<hr>
+<blockquote>
+<p>零元具有唯一性，因为不能有两个特殊元素保证运算后和自身相等</p>
+</blockquote>
+<blockquote>
+<p>运算表中，某元素是等幂元的充要条件是该元素在对角线上的取值为其本身</p>
+</blockquote>
+<blockquote>
+<p>运算表中，某元素是零元的充要条件是该元素对应的行、列元素均与该元素相同</p>
+</blockquote>
+<hr>
+<h4 id="③单位元"><a href="#③单位元" class="headerlink" title="③单位元"></a>③单位元</h4><blockquote>
+<p>任何元素和一个特殊元素进行二元运算，所得结果都为选取的任何元素，则该特殊元素称为代数系统的单位元</p>
+<p>幺元也必为等幂元</p>
+<p>单位元也有左右之分</p>
+<p>单位元又称为幺元</p>
+</blockquote>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220912165416791.png" alt="image-20220912165416791"></p>
+<hr>
+<blockquote>
+<p>幺元也具有唯一性，同理零元</p>
+</blockquote>
+<hr>
+<ul>
+<li><h6 id="幺元的求法"><a href="#幺元的求法" class="headerlink" title="幺元的求法"></a>幺元的求法</h6></li>
+</ul>
+<blockquote>
+<p>假设代入求解法，此方法也适用于其他代数运算的特殊元素</p>
+</blockquote>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220912165623960.png" alt="image-20220912165623960"></p>
+<hr>
+<h4 id="④逆元"><a href="#④逆元" class="headerlink" title="④逆元"></a>④逆元</h4><blockquote>
+<p>某元素和另一个元素进行二元运算，所得结果为单位元e，则该元素称为某元素的逆元</p>
+<p>逆元也有左右之分</p>
+<p>每个元素的逆元都是唯一的</p>
+</blockquote>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220912171027109.png" alt="image-20220912171027109"></p>
+<hr>
+<blockquote>
+<p>元素逆元的逆元是其本身</p>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220912174708805.png" alt="image-20220912174708805"></p>
+</blockquote>
+<hr>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220912175300977.png" alt="image-20220912175300977"></p>
+<hr>
+<ul>
+<li><h6 id="实例-2"><a href="#实例-2" class="headerlink" title="实例"></a>实例</h6></li>
+</ul>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220912175424160.png" alt="image-20220912175424160"></p>
+<hr>
+<h4 id="⑤可消去元"><a href="#⑤可消去元" class="headerlink" title="⑤可消去元"></a>⑤可消去元</h4><blockquote>
+<p>定义</p>
+</blockquote>
+<hr>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220912175654160.png" alt="image-20220912175654160"></p>
+<hr>
+<blockquote>
+<p>如果a存在逆元，则a就是可消去元，证明如下</p>
+</blockquote>
+<hr>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220912175929442.png" alt="image-20220912175929442"></p>
+<hr>
+<h4 id="⑥特殊元素求解"><a href="#⑥特殊元素求解" class="headerlink" title="⑥特殊元素求解"></a>⑥特殊元素求解</h4><blockquote>
+<p>等幂元求解、零元求解</p>
+</blockquote>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220912180225191.png" alt="image-20220912180225191"></p>
+<hr>
+<blockquote>
+<p>单位元求解、幺元求解</p>
+</blockquote>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220912180429775.png" alt="image-20220912180429775"></p>
+<hr>
+<blockquote>
+<p>逆元求解</p>
+</blockquote>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220912180528667.png" alt="image-20220912180528667"></p>
+<hr>
+<blockquote>
+<p>可消去元求解</p>
+</blockquote>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220912180831133.png" alt="image-20220912180831133"></p>
+<hr>
+<h3 id="6-同构代数系统"><a href="#6-同构代数系统" class="headerlink" title="6.同构代数系统"></a>6.同构代数系统</h3><blockquote>
+<p>引入：使用双射函数来表示两个结构相同的代数系统之间的关系</p>
+</blockquote>
+<h4 id="①同构代数系统定义"><a href="#①同构代数系统定义" class="headerlink" title="①同构代数系统定义"></a>①同构代数系统定义</h4><p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220912181447212.png" alt="image-20220912181447212"></p>
+<hr>
+<blockquote>
+<p>证明代数系统同构，要构造出其符合的双射函数</p>
+</blockquote>
+<hr>
+<h4 id="②同构代数系统的证明"><a href="#②同构代数系统的证明" class="headerlink" title="②同构代数系统的证明"></a>②同构代数系统的证明</h4><p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220912181700006.png" alt="image-20220912181700006"></p>
+<hr>
+<h4 id="③自同构代数系统"><a href="#③自同构代数系统" class="headerlink" title="③自同构代数系统"></a>③自同构代数系统</h4><p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220912181816958.png" alt="image-20220912181816958"></p>
+<hr>
+<h4 id="④自同构映射示例"><a href="#④自同构映射示例" class="headerlink" title="④自同构映射示例"></a>④自同构映射示例</h4><p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220912181922228.png" alt="image-20220912181922228"></p>
+<hr>
+<h4 id="⑤代数系统同构关系性质"><a href="#⑤代数系统同构关系性质" class="headerlink" title="⑤代数系统同构关系性质"></a>⑤代数系统同构关系性质</h4><blockquote>
+<p>代数系统的同构关系是等价关系</p>
+</blockquote>
+<hr>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220912182116945.png" alt="image-20220912182116945"></p>
+<hr>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220912182053677.png" alt="image-20220912182053677"></p>
+<blockquote>
+<p>这里函数是有具体含义的，不能直接换给另一个用</p>
+</blockquote>
+<hr>
+<p>*　###### 同构代数系统的概念可以推广到含有多个代数运算的代数系统</p>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220912182411320.png" alt="image-20220912182411320"></p>
+<hr>
+<h3 id="7-同态代数系统"><a href="#7-同态代数系统" class="headerlink" title="7.同态代数系统"></a>7.同态代数系统</h3><blockquote>
+<p>引入：两个代数系统没有完全相同的结构，但存在一些相似的性质</p>
+</blockquote>
+<h4 id="①同态代数系统的定义"><a href="#①同态代数系统的定义" class="headerlink" title="①同态代数系统的定义"></a>①同态代数系统的定义</h4><p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220912182903899.png" alt="image-20220912182903899"></p>
+<hr>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220912182929819.png" alt="image-20220912182929819"></p>
+<hr>
+<blockquote>
+<p>设函数f是代数系统&lt;S,﹡&gt;到&lt;T,◦&gt;的同态映射，则同态像f(S)是集合T的非空子集。</p>
+</blockquote>
+<hr>
+<ul>
+<li><h4 id="示例-5"><a href="#示例-5" class="headerlink" title="示例"></a>示例</h4></li>
+</ul>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220912183259148.png" alt="image-20220912183259148"></p>
+<hr>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220912183324507.png" alt="image-20220912183324507"></p>
+<hr>
+<h4 id="②自同态代数系统"><a href="#②自同态代数系统" class="headerlink" title="②自同态代数系统"></a>②自同态代数系统</h4><p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220912183502038.png" alt="image-20220912183502038"></p>
+<hr>
+<ul>
+<li><h6 id="示例-6"><a href="#示例-6" class="headerlink" title="示例"></a>示例</h6></li>
+</ul>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220912183536965.png" alt="image-20220912183536965"></p>
+<hr>
+<blockquote>
+<p> N<del>6</del>中的元素为012345</p>
+</blockquote>
+<hr>
+<blockquote>
+<p>自同态映射的证明最关键的一步</p>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220912183918566.png" alt="image-20220912183918566"></p>
+</blockquote>
+<hr>
+<h4 id="③同态核"><a href="#③同态核" class="headerlink" title="③同态核"></a>③同态核</h4><blockquote>
+<p>设函数f是代数系统&lt;S,﹡&gt;到&lt;T,◦&gt;的同态映射，则同态核Ker(f)是集合S的非空子集。</p>
+<p>同态核可以用来求解子代数系统</p>
+<p>注意&#x3D;&#x3D;<strong>f(x)</strong>&#x3D;&#x3D;的结果要是**&#x3D;&#x3D;幺元&#x3D;&#x3D;**才行</p>
+</blockquote>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220912184350836.png" alt="image-20220912184350836"></p>
+<hr>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220912184506374.png" alt="image-20220912184506374"></p>
+<hr>
+<h3 id="8-同态映射的性质"><a href="#8-同态映射的性质" class="headerlink" title="8.同态映射的性质"></a>8.同态映射的性质</h3><blockquote>
+<p>引子</p>
+</blockquote>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220912184916204.png" alt="image-20220912184916204"></p>
+<hr>
+<h4 id="①可交换性和可结合性对应"><a href="#①可交换性和可结合性对应" class="headerlink" title="①可交换性和可结合性对应"></a>①可交换性和可结合性对应</h4><p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220912185035888.png" alt="image-20220912185035888"></p>
+<hr>
+<h4 id="②单位元和零元一一对应"><a href="#②单位元和零元一一对应" class="headerlink" title="②单位元和零元一一对应"></a>②单位元和零元一一对应</h4><p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220912185117127.png" alt="image-20220912185117127"></p>
+<hr>
+<h4 id="③逆元和等幂元一一对应"><a href="#③逆元和等幂元一一对应" class="headerlink" title="③逆元和等幂元一一对应"></a>③逆元和等幂元一一对应</h4><p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220912185228760.png" alt="image-20220912185228760"></p>
+<hr>
+<ul>
+<li><h6 id="示例-7"><a href="#示例-7" class="headerlink" title="示例"></a>示例</h6></li>
+</ul>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220912185323717.png" alt="image-20220912185323717"></p>
+<hr>
+<h4 id="④代数系统同态的意义"><a href="#④代数系统同态的意义" class="headerlink" title="④代数系统同态的意义"></a>④代数系统同态的意义</h4><p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220912185427481.png" alt="image-20220912185427481"></p>
+<hr>
+<h4 id="⑤同态概念推广"><a href="#⑤同态概念推广" class="headerlink" title="⑤同态概念推广"></a>⑤同态概念推广</h4><p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220912185547073.png" alt="image-20220912185547073"></p>
+<hr>
+<h3 id="9-代数系统的应用"><a href="#9-代数系统的应用" class="headerlink" title="9.代数系统的应用"></a>9.代数系统的应用</h3><blockquote>
+<p>引入问题分析</p>
+</blockquote>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220912185845962.png" alt="image-20220912185845962"></p>
+<hr>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220912185924560.png" alt="image-20220912185924560"></p>
+<hr>
+<h4 id="①同余关系"><a href="#①同余关系" class="headerlink" title="①同余关系"></a>①同余关系</h4><p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220912191325163.png" alt="image-20220912191325163"></p>
+<hr>
+<h4 id="②国际标准书号校验码"><a href="#②国际标准书号校验码" class="headerlink" title="②国际标准书号校验码"></a>②国际标准书号校验码</h4><p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220912191522193.png" alt="image-20220912191522193"></p>
+<hr>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220912191550704.png" alt="image-20220912191550704"></p>
+<hr>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220912191619888.png" alt="image-20220912191619888"></p>
+<hr>
+<h2 id="第七章-典型代数系统"><a href="#第七章-典型代数系统" class="headerlink" title="第七章 典型代数系统"></a>第七章 典型代数系统</h2><h3 id="1-半群和子半群"><a href="#1-半群和子半群" class="headerlink" title="1.半群和子半群"></a>1.半群和子半群</h3><h4 id="①半群的定义"><a href="#①半群的定义" class="headerlink" title="①半群的定义"></a>①半群的定义</h4><p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220913222155634.png" alt="image-20220913222155634"></p>
+<hr>
+<blockquote>
+<p>查看是否有结合性判断半群</p>
+</blockquote>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220913222235401.png" alt="image-20220913222235401"></p>
+<hr>
+<ul>
+<li><h6 id="示例-8"><a href="#示例-8" class="headerlink" title="示例"></a>示例</h6></li>
+</ul>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220913222347819.png" alt="image-20220913222347819"></p>
+<hr>
+<h4 id="②半群的性质"><a href="#②半群的性质" class="headerlink" title="②半群的性质"></a>②半群的性质</h4><p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220913222705023.png" alt="image-20220913222705023"></p>
+<hr>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220913222745970.png" alt="image-20220913222745970"></p>
+<hr>
+<h4 id="③子半群的定义"><a href="#③子半群的定义" class="headerlink" title="③子半群的定义"></a>③子半群的定义</h4><p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220913222819091.png" alt="image-20220913222819091"></p>
+<hr>
+<blockquote>
+<p>根据封闭性判断是否是子半群</p>
+</blockquote>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220913222925761.png" alt="image-20220913222925761"></p>
+<hr>
+<h3 id="2-独异点和子独异点"><a href="#2-独异点和子独异点" class="headerlink" title="2.独异点和子独异点"></a>2.独异点和子独异点</h3><h4 id="①独异点的定义"><a href="#①独异点的定义" class="headerlink" title="①独异点的定义"></a>①独异点的定义</h4><p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220913223113167.png" alt="image-20220913223113167"></p>
+<hr>
+<blockquote>
+<p>根据幺元判定独异点</p>
+</blockquote>
+<hr>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220913223148240.png" alt="image-20220913223148240"></p>
+<hr>
+<h4 id="②子独异点的定义"><a href="#②子独异点的定义" class="headerlink" title="②子独异点的定义"></a>②子独异点的定义</h4><p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220913223216029.png" alt="image-20220913223216029"></p>
+<hr>
+<blockquote>
+<p>根据子群、相同幺元、封闭性判断子独异点</p>
+</blockquote>
+<hr>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220913223301511.png" alt="image-20220913223301511"></p>
+<hr>
+<h3 id="3-群"><a href="#3-群" class="headerlink" title="3.群"></a>3.群</h3><h4 id="①群的定义"><a href="#①群的定义" class="headerlink" title="①群的定义"></a>①群的定义</h4><p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220913223356346.png" alt="image-20220913223356346"></p>
+<hr>
+<blockquote>
+<p>根据结合律、幺元、逆元判定群</p>
+</blockquote>
+<hr>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220913223447137.png" alt="image-20220913223447137"></p>
+<hr>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220913223559503.png" alt="image-20220913223559503"></p>
+<hr>
+<h4 id="③群的阶数定义、无限群"><a href="#③群的阶数定义、无限群" class="headerlink" title="③群的阶数定义、无限群"></a>③群的阶数定义、无限群</h4><p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220913223632134.png" alt="image-20220913223632134"></p>
+<hr>
+<h4 id="④元素的阶数"><a href="#④元素的阶数" class="headerlink" title="④元素的阶数"></a>④元素的阶数</h4><p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220913223718154.png" alt="image-20220913223718154"></p>
+<hr>
+<h4 id="④群的应用-Klein四元群"><a href="#④群的应用-Klein四元群" class="headerlink" title="④群的应用 Klein四元群"></a>④群的应用 Klein四元群</h4><p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220913223802326.png" alt="image-20220913223802326"></p>
+<hr>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220913223822159.png" alt="image-20220913223822159"></p>
+<hr>
+<h3 id="4-群的性质"><a href="#4-群的性质" class="headerlink" title="4.群的性质"></a>4.群的性质</h3><h4 id="①性质一"><a href="#①性质一" class="headerlink" title="①性质一"></a>①性质一</h4><blockquote>
+<p>幺元是唯一的等幂元</p>
+</blockquote>
+<hr>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220913223951611.png" alt="image-20220913223951611"></p>
+<hr>
+<h4 id="②性质二"><a href="#②性质二" class="headerlink" title="②性质二"></a>②性质二</h4><blockquote>
+<p>G中至少有两个元素时，不存在零元</p>
+</blockquote>
+<hr>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220913224028903.png" alt="image-20220913224028903"></p>
+<hr>
+<h4 id="③性质三"><a href="#③性质三" class="headerlink" title="③性质三"></a>③性质三</h4><blockquote>
+<p>V a,b∈G， 如果a&#x3D;&#x3D;<em>&#x3D;&#x3D;b &#x3D;b或者b&#x3D;&#x3D;</em>&#x3D;&#x3D;a&#x3D;b， 则a是关于运算“*”的幺元。</p>
+</blockquote>
+<hr>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220913224144763.png" alt="image-20220913224144763"></p>
+<hr>
+<h4 id="④性质四"><a href="#④性质四" class="headerlink" title="④性质四"></a>④性质四</h4><blockquote>
+<p>任一元素都是可消去元</p>
+</blockquote>
+<hr>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220913224348771.png" alt="image-20220913224348771"></p>
+<hr>
+<h4 id="⑤性质五"><a href="#⑤性质五" class="headerlink" title="⑤性质五"></a>⑤性质五</h4><blockquote>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220913224608323.png" alt="image-20220913224608323"></p>
+<p>待转换公式</p>
+</blockquote>
+<hr>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220913224523379.png" alt="image-20220913224523379"></p>
+<hr>
+<h4 id="⑥性质六"><a href="#⑥性质六" class="headerlink" title="⑥性质六"></a>⑥性质六</h4><blockquote>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220913224712899.png" alt="image-20220913224712899"></p>
+<p>待转换公式</p>
+</blockquote>
+<hr>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220913224707201.png" alt="image-20220913224707201"></p>
+<hr>
+<h4 id="⑦性质七"><a href="#⑦性质七" class="headerlink" title="⑦性质七"></a>⑦性质七</h4><blockquote>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220913224811702.png" alt="image-20220913224811702"></p>
+<p>待转换公式</p>
+</blockquote>
+<hr>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220913224803526.png" alt="image-20220913224803526"></p>
+<hr>
+<h4 id="⑧⑨性质八九"><a href="#⑧⑨性质八九" class="headerlink" title="⑧⑨性质八九"></a>⑧⑨性质八九</h4><blockquote>
+<p>待转换公式</p>
+</blockquote>
+<hr>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220913224858935.png" alt="image-20220913224858935"></p>
+<hr>
+<h4 id="群性质的应用"><a href="#群性质的应用" class="headerlink" title="群性质的应用"></a>群性质的应用</h4><hr>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220913224942527.png" alt="image-20220913224942527"></p>
+<hr>
+<h3 id="5-子群"><a href="#5-子群" class="headerlink" title="5.子群"></a>5.子群</h3><h4 id="①子群的定义"><a href="#①子群的定义" class="headerlink" title="①子群的定义"></a>①子群的定义</h4><p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220913225041978.png" alt="image-20220913225041978"></p>
+<hr>
+<h4 id="②子群的求解"><a href="#②子群的求解" class="headerlink" title="②子群的求解"></a>②子群的求解</h4><p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220913225115756.png" alt="image-20220913225115756"></p>
+<hr>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220913225147143.png" alt="image-20220913225147143"></p>
+<hr>
+<h3 id="6-子群的性质"><a href="#6-子群的性质" class="headerlink" title="6.子群的性质"></a>6.子群的性质</h3><h4 id="性质一"><a href="#性质一" class="headerlink" title="性质一"></a>性质一</h4><p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220913225714248.png" alt="image-20220913225714248"></p>
+<hr>
+<h4 id="性质二"><a href="#性质二" class="headerlink" title="性质二"></a>性质二</h4><p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220913225734397.png" alt="image-20220913225734397"></p>
+<hr>
+<h4 id="性质三"><a href="#性质三" class="headerlink" title="性质三"></a>性质三</h4><p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220913225754028.png" alt="image-20220913225754028"></p>
+<hr>
+<ul>
+<li><h6 id="示例-9"><a href="#示例-9" class="headerlink" title="示例"></a>示例</h6></li>
+</ul>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220913225820443.png" alt="image-20220913225820443"></p>
+<hr>
+<h4 id="性质四"><a href="#性质四" class="headerlink" title="性质四"></a>性质四</h4><blockquote>
+<p>有限子群的判定方法</p>
+</blockquote>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220913225900764.png" alt="image-20220913225900764"></p>
+<hr>
+<h4 id="性质五"><a href="#性质五" class="headerlink" title="性质五"></a>性质五</h4><p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220913230037078.png" alt="image-20220913230037078"></p>
+<hr>
+<h4 id="拉格朗日定理"><a href="#拉格朗日定理" class="headerlink" title="拉格朗日定理"></a>拉格朗日定理</h4><p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220913230106821.png" alt="image-20220913230106821"></p>
+<hr>
+<h4 id="子群性质的应用-Klein"><a href="#子群性质的应用-Klein" class="headerlink" title="子群性质的应用 Klein"></a>子群性质的应用 Klein</h4><blockquote>
+<p>Klein</p>
+</blockquote>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220913230138208.png" alt="image-20220913230138208"></p>
+<hr>
+<h3 id="7-交换群和循环群"><a href="#7-交换群和循环群" class="headerlink" title="7.交换群和循环群"></a>7.交换群和循环群</h3><h4 id="①交换群的定义"><a href="#①交换群的定义" class="headerlink" title="①交换群的定义"></a>①交换群的定义</h4><p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220913230317595.png" alt="image-20220913230317595"></p>
+<hr>
+<h4 id="②循环群的定义"><a href="#②循环群的定义" class="headerlink" title="②循环群的定义"></a>②循环群的定义</h4><p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220913230534945.png" alt="image-20220913230534945"></p>
+<hr>
+<h4 id="③循环群的判定"><a href="#③循环群的判定" class="headerlink" title="③循环群的判定"></a>③循环群的判定</h4><p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220913230657833.png" alt="image-20220913230657833"></p>
+<hr>
+<ul>
+<li><h6 id="示例-10"><a href="#示例-10" class="headerlink" title="示例"></a>示例</h6></li>
+</ul>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220913230906982.png" alt="image-20220913230906982"></p>
+<hr>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220913230952657.png" alt="image-20220913230952657"></p>
+<hr>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220913231025226.png" alt="image-20220913231025226"></p>
+<hr>
+<h3 id="8-循环群的性质"><a href="#8-循环群的性质" class="headerlink" title="8.循环群的性质"></a>8.循环群的性质</h3><p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220913231340666.png" alt="image-20220913231340666"></p>
+<hr>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220913231402070.png" alt="image-20220913231402070"></p>
+<hr>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220913231426235.png" alt="image-20220913231426235"></p>
+<hr>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220913231449739.png" alt="image-20220913231449739"></p>
+<hr>
+<ul>
+<li><h6 id="示例-11"><a href="#示例-11" class="headerlink" title="示例"></a>示例</h6></li>
+</ul>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220913231532622.png" alt="image-20220913231532622"></p>
+<hr>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220913231610704.png" alt="image-20220913231610704"></p>
+<hr>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220913231638639.png" alt="image-20220913231638639"></p>
+<hr>
+<h3 id="9-群的应用"><a href="#9-群的应用" class="headerlink" title="9.群的应用"></a>9.群的应用</h3><blockquote>
+<p>引入</p>
+</blockquote>
+<hr>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220913231958484.png" alt="image-20220913231958484"></p>
+<hr>
+<h4 id="奇偶校验码"><a href="#奇偶校验码" class="headerlink" title="奇偶校验码"></a>奇偶校验码</h4><p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220913232040289.png" alt="image-20220913232040289"></p>
+<hr>
+<h4 id="汉明距离定义"><a href="#汉明距离定义" class="headerlink" title="汉明距离定义"></a>汉明距离定义</h4><p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220913232111577.png" alt="image-20220913232111577"></p>
+<hr>
+<h4 id="汉明距离性质"><a href="#汉明距离性质" class="headerlink" title="汉明距离性质"></a>汉明距离性质</h4><p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220913232150661.png" alt="image-20220913232150661"></p>
+<hr>
+<ul>
+<li><h5 id="实例-3"><a href="#实例-3" class="headerlink" title="实例"></a>实例</h5></li>
+</ul>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220913232223912.png" alt="image-20220913232223912"></p>
+<hr>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220913232252318.png" alt="image-20220913232252318"></p>
+<hr>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220913232315943.png" alt="image-20220913232315943"></p>
+<hr>
+<h2 id="第八章-图论基础"><a href="#第八章-图论基础" class="headerlink" title="第八章 图论基础"></a>第八章 图论基础</h2><h3 id="1-图的基本概念"><a href="#1-图的基本概念" class="headerlink" title="1.图的基本概念"></a>1.图的基本概念</h3><h4 id="①无序对、无序序偶、无序积"><a href="#①无序对、无序序偶、无序积" class="headerlink" title="①无序对、无序序偶、无序积"></a>①无序对、无序序偶、无序积</h4><p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220913233142099.png" alt="image-20220913233142099"></p>
+<hr>
+<h4 id="②图的阶数、有向边、无向边、自环、关联边"><a href="#②图的阶数、有向边、无向边、自环、关联边" class="headerlink" title="②图的阶数、有向边、无向边、自环、关联边"></a>②图的阶数、有向边、无向边、自环、关联边</h4><p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220913233343290.png" alt="image-20220913233343290"></p>
+<hr>
+<ul>
+<li><h6 id="示例-12"><a href="#示例-12" class="headerlink" title="示例"></a>示例</h6></li>
+</ul>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220913233453999.png" alt="image-20220913233453999"></p>
+<hr>
+<h4 id="③重复边、重数"><a href="#③重复边、重数" class="headerlink" title="③重复边、重数"></a>③重复边、重数</h4><p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220913233529142.png" alt="image-20220913233529142"></p>
+<hr>
+<h4 id="④图的分类定义"><a href="#④图的分类定义" class="headerlink" title="④图的分类定义"></a>④图的分类定义</h4><p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220913234113609.png" alt="image-20220913234113609"></p>
+<hr>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220913234309606.png" alt="image-20220913234309606"></p>
+<hr>
+<h3 id="2-子图"><a href="#2-子图" class="headerlink" title="2.子图"></a>2.子图</h3><h4 id="①子图的定义"><a href="#①子图的定义" class="headerlink" title="①子图的定义"></a>①子图的定义</h4><p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220913234604894.png" alt="image-20220913234604894"></p>
+<hr>
+<h4 id="②生成子图的定义"><a href="#②生成子图的定义" class="headerlink" title="②生成子图的定义"></a>②生成子图的定义</h4><p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220913234734435.png" alt="image-20220913234734435"></p>
+<hr>
+<h4 id="④导出子图的定义"><a href="#④导出子图的定义" class="headerlink" title="④导出子图的定义"></a>④导出子图的定义</h4><p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220913234841122.png" alt="image-20220913234841122"></p>
+<hr>
+<h4 id="示例-13"><a href="#示例-13" class="headerlink" title="示例"></a>示例</h4><p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220913234926446.png" alt="image-20220913234926446"></p>
+<h3 id="3-握手定理"><a href="#3-握手定理" class="headerlink" title="3.握手定理"></a>3.握手定理</h3><h4 id="①节点度数定义"><a href="#①节点度数定义" class="headerlink" title="①节点度数定义"></a>①节点度数定义</h4><p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220913235237941.png" alt="image-20220913235237941"></p>
+<hr>
+<h4 id="②握手定理"><a href="#②握手定理" class="headerlink" title="②握手定理"></a>②握手定理</h4><p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220913235624195.png" alt="image-20220913235624195"></p>
+<hr>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220913235645704.png" alt="image-20220913235645704"></p>
+<hr>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220913235708046.png" alt="image-20220913235708046"></p>
+<hr>
+<ul>
+<li><h5 id="推论"><a href="#推论" class="headerlink" title="推论"></a>推论</h5></li>
+</ul>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220913235750596.png" alt="image-20220913235750596"></p>
+<hr>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220913235813285.png" alt="image-20220913235813285"></p>
+<hr>
+<ul>
+<li><h6 id="示例-14"><a href="#示例-14" class="headerlink" title="示例"></a>示例</h6></li>
+</ul>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220914000224038.png" alt="image-20220914000224038"></p>
+<hr>
+<h4 id="③握手定理的应用"><a href="#③握手定理的应用" class="headerlink" title="③握手定理的应用"></a>③握手定理的应用</h4><p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220914000306902.png" alt="image-20220914000306902"></p>
+<hr>
+<h3 id="4-图的同构"><a href="#4-图的同构" class="headerlink" title="4.图的同构"></a>4.图的同构</h3><h4 id="①图的同构定义"><a href="#①图的同构定义" class="headerlink" title="①图的同构定义"></a>①图的同构定义</h4><p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220914000707724.png" alt="image-20220914000707724"></p>
+<hr>
+<h4 id="②图同构的必要条件"><a href="#②图同构的必要条件" class="headerlink" title="②图同构的必要条件"></a>②图同构的必要条件</h4><p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220914000759322.png" alt="image-20220914000759322"></p>
+<hr>
+<h4 id="③同构实例"><a href="#③同构实例" class="headerlink" title="③同构实例"></a>③同构实例</h4><p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220914000833623.png" alt="image-20220914000833623"></p>
+<hr>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220914000908049.png" alt="image-20220914000908049"></p>
+<hr>
+<h3 id="5-通路和回路"><a href="#5-通路和回路" class="headerlink" title="5.通路和回路"></a>5.通路和回路</h3><h4 id="①通路和回路的定义"><a href="#①通路和回路的定义" class="headerlink" title="①通路和回路的定义"></a>①通路和回路的定义</h4><p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220914001048792.png" alt="image-20220914001048792"></p>
+<hr>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220914001127133.png" alt="image-20220914001127133"></p>
+<hr>
+<h4 id="②通路和回路的性质"><a href="#②通路和回路的性质" class="headerlink" title="②通路和回路的性质"></a>②通路和回路的性质</h4><p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220914001337308.png" alt="image-20220914001337308"></p>
+<hr>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220914001401719.png" alt="image-20220914001401719"></p>
+<hr>
+<h4 id="示例-15"><a href="#示例-15" class="headerlink" title="示例"></a>示例</h4><p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220914001424052.png" alt="image-20220914001424052"></p>
+<hr>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220914001510524.png" alt="image-20220914001510524"></p>
+<hr>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220914001535317.png" alt="image-20220914001535317"></p>
+<hr>
+<h3 id="6-图的连通性"><a href="#6-图的连通性" class="headerlink" title="6.图的连通性"></a>6.图的连通性</h3><h4 id="①无向图的连通性"><a href="#①无向图的连通性" class="headerlink" title="①无向图的连通性"></a>①无向图的连通性</h4><p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220914001750842.png" alt="image-20220914001750842"></p>
+<hr>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220914001841937.png" alt="image-20220914001841937"></p>
+<hr>
+<h4 id="②连通分支"><a href="#②连通分支" class="headerlink" title="②连通分支"></a>②连通分支</h4><p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220914001936442.png" alt="image-20220914001936442"></p>
+<hr>
+<h4 id="③有向图的连通性"><a href="#③有向图的连通性" class="headerlink" title="③有向图的连通性"></a>③有向图的连通性</h4><blockquote>
+<p>弱连通图、单向连通图、强连通图</p>
+</blockquote>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220914002043138.png" alt="image-20220914002043138"></p>
+<hr>
+<blockquote>
+<p>弱连通分支、单向连通分支、强连通分支</p>
+</blockquote>
+<hr>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220914002228111.png" alt="image-20220914002228111"></p>
+<hr>
+<h4 id="④示例"><a href="#④示例" class="headerlink" title="④示例"></a>④示例</h4><p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220914002349322.png" alt="image-20220914002349322"></p>
+<hr>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220914002408422.png" alt="image-20220914002408422"></p>
+<hr>
+<h3 id="7-图的操作"><a href="#7-图的操作" class="headerlink" title="7.图的操作"></a>7.图的操作</h3><h4 id="①删除边"><a href="#①删除边" class="headerlink" title="①删除边"></a>①删除边</h4><p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220914002554309.png" alt="image-20220914002554309"></p>
+<hr>
+<h4 id="②删除结点"><a href="#②删除结点" class="headerlink" title="②删除结点"></a>②删除结点</h4><p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220914002718412.png" alt="image-20220914002718412"></p>
+<hr>
+<h4 id="③收缩边"><a href="#③收缩边" class="headerlink" title="③收缩边"></a>③收缩边</h4><p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220914002756510.png" alt="image-20220914002756510"></p>
+<hr>
+<h4 id="示例-16"><a href="#示例-16" class="headerlink" title="示例"></a>示例</h4><p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220914003606993.png" alt="image-20220914003606993"></p>
+<hr>
+<h3 id="8-图的表示"><a href="#8-图的表示" class="headerlink" title="8.图的表示"></a>8.图的表示</h3><h4 id="①关联矩阵表示"><a href="#①关联矩阵表示" class="headerlink" title="①关联矩阵表示"></a>①关联矩阵表示</h4><p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220914004945991.png" alt="image-20220914004945991"></p>
+<hr>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220914005005546.png" alt="image-20220914005005546"></p>
+<hr>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220914005113770.png" alt="image-20220914005113770"></p>
+<hr>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220914005132981.png" alt="image-20220914005132981"></p>
+<hr>
+<h4 id="②邻接矩阵表示"><a href="#②邻接矩阵表示" class="headerlink" title="②邻接矩阵表示"></a>②邻接矩阵表示</h4><p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220914005356166.png" alt="image-20220914005356166"></p>
+<hr>
+<h4 id="③可达矩阵表示"><a href="#③可达矩阵表示" class="headerlink" title="③可达矩阵表示"></a>③可达矩阵表示</h4><p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220914005451716.png" alt="image-20220914005451716"></p>
+<hr>
+<h3 id="9-赋权图和最短通路问题"><a href="#9-赋权图和最短通路问题" class="headerlink" title="9.赋权图和最短通路问题"></a>9.赋权图和最短通路问题</h3><h4 id="①赋权图定义"><a href="#①赋权图定义" class="headerlink" title="①赋权图定义"></a>①赋权图定义</h4><p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220914005709715.png" alt="image-20220914005709715"></p>
+<hr>
+<h4 id="②边权矩阵定义"><a href="#②边权矩阵定义" class="headerlink" title="②边权矩阵定义"></a>②边权矩阵定义</h4><p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220914005821428.png" alt="image-20220914005821428"></p>
+<hr>
+<h4 id="③最短通路问题"><a href="#③最短通路问题" class="headerlink" title="③最短通路问题"></a>③最短通路问题</h4><p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220914005856864.png" alt="image-20220914005856864"></p>
+<hr>
+<ul>
+<li><h6 id="示例-17"><a href="#示例-17" class="headerlink" title="示例"></a>示例</h6></li>
+</ul>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220914005923495.png" alt="image-20220914005923495"></p>
+<hr>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220914005944394.png" alt="image-20220914005944394"></p>
+<hr>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220914010043380.png" alt="image-20220914010043380"></p>
+<hr>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220914010120456.png" alt="image-20220914010120456"></p>
+<hr>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220914010156551.png" alt="image-20220914010156551"></p>
+<hr>
+<h4 id="④最短通路问题的应用-设备更新问题"><a href="#④最短通路问题的应用-设备更新问题" class="headerlink" title="④最短通路问题的应用-设备更新问题"></a>④最短通路问题的应用-设备更新问题</h4><p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220914010318557.png" alt="image-20220914010318557"></p>
+<hr>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220914010341007.png" alt="image-20220914010341007"></p>
+<hr>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220914010401347.png" alt="image-20220914010401347"></p>
+<hr>
+<h3 id="10-欧拉图及其应用"><a href="#10-欧拉图及其应用" class="headerlink" title="10.欧拉图及其应用"></a>10.欧拉图及其应用</h3><h4 id="①哥尼斯堡七桥问题"><a href="#①哥尼斯堡七桥问题" class="headerlink" title="①哥尼斯堡七桥问题"></a>①哥尼斯堡七桥问题</h4><p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220914010534526.png" alt="image-20220914010534526"></p>
+<hr>
+<h4 id="②欧拉图定义"><a href="#②欧拉图定义" class="headerlink" title="②欧拉图定义"></a>②欧拉图定义</h4><p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220914010615896.png" alt="image-20220914010615896"></p>
+<hr>
+<h4 id="③欧拉图的判定"><a href="#③欧拉图的判定" class="headerlink" title="③欧拉图的判定"></a>③欧拉图的判定</h4><blockquote>
+<p>无向欧拉图的判定定理</p>
+</blockquote>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220914010654214.png" alt="image-20220914010654214"></p>
+<hr>
+<blockquote>
+<p>有向欧拉图的判定定理</p>
+</blockquote>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220914010802435.png" alt="image-20220914010802435"></p>
+<hr>
+<h4 id="④欧拉图的应用"><a href="#④欧拉图的应用" class="headerlink" title="④欧拉图的应用"></a>④欧拉图的应用</h4><blockquote>
+<p>蚂蚁赛跑问题</p>
+</blockquote>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220914010909844.png" alt="image-20220914010909844"></p>
+<hr>
+<blockquote>
+<p>道路清扫车问题</p>
+</blockquote>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220914010953867.png" alt="image-20220914010953867"></p>
+<hr>
+<h3 id="11-哈密顿图及其应用"><a href="#11-哈密顿图及其应用" class="headerlink" title="11.哈密顿图及其应用"></a>11.哈密顿图及其应用</h3><blockquote>
+<p>引入</p>
+</blockquote>
+<hr>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220914011105134.png" alt="image-20220914011105134"></p>
+<hr>
+<h4 id="①哈密顿图定义"><a href="#①哈密顿图定义" class="headerlink" title="①哈密顿图定义"></a>①哈密顿图定义</h4><p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220914011147278.png" alt="image-20220914011147278"></p>
+<hr>
+<h4 id="②哈密顿图的判定"><a href="#②哈密顿图的判定" class="headerlink" title="②哈密顿图的判定"></a>②哈密顿图的判定</h4><p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220914011335560.png" alt="image-20220914011335560"></p>
+<hr>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220914011401498.png" alt="image-20220914011401498"></p>
+<hr>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220914011436273.png" alt="image-20220914011436273"></p>
+<hr>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220914011456872.png" alt="image-20220914011456872"></p>
+<hr>
+<h4 id="③哈密顿图的判定定理"><a href="#③哈密顿图的判定定理" class="headerlink" title="③哈密顿图的判定定理"></a>③哈密顿图的判定定理</h4><p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220914011536736.png" alt="image-20220914011536736"></p>
+<hr>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220914011609404.png" alt="image-20220914011609404"></p>
+<h4 id="④哈密顿图的应用"><a href="#④哈密顿图的应用" class="headerlink" title="④哈密顿图的应用"></a>④哈密顿图的应用</h4><p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220914011709149.png" alt="image-20220914011709149"></p>
+<hr>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220914011726328.png" alt="image-20220914011726328"></p>
+<hr>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220914011744755.png" alt="image-20220914011744755"></p>
+<hr>
+<h4 id="欧拉图和哈密顿图的对比"><a href="#欧拉图和哈密顿图的对比" class="headerlink" title="欧拉图和哈密顿图的对比"></a>欧拉图和哈密顿图的对比</h4><p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220914011237354.png" alt="image-20220914011237354"></p>
+<hr>
+<h2 id="第九章-树"><a href="#第九章-树" class="headerlink" title="第九章 树"></a>第九章 树</h2><h3 id="1-无向树"><a href="#1-无向树" class="headerlink" title="1.无向树"></a>1.无向树</h3><h4 id="①无向树定义"><a href="#①无向树定义" class="headerlink" title="①无向树定义"></a>①无向树定义</h4><p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220914011914301.png" alt="image-20220914011914301"></p>
+<hr>
+<h4 id="②树的性质定理"><a href="#②树的性质定理" class="headerlink" title="②树的性质定理"></a>②树的性质定理</h4><p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220914012008671.png" alt="image-20220914012008671"></p>
+<hr>
+<ul>
+<li><h6 id="推导证明"><a href="#推导证明" class="headerlink" title="推导证明"></a>推导证明</h6></li>
+</ul>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220914012034735.png" alt="image-20220914012034735"></p>
+<hr>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220914012117990.png" alt="image-20220914012117990"></p>
+<hr>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220914012135214.png" alt="image-20220914012135214"></p>
+<hr>
+<h4 id="④树的应用"><a href="#④树的应用" class="headerlink" title="④树的应用"></a>④树的应用</h4><p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220914012202492.png" alt="image-20220914012202492"></p>
+<hr>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220914012231116.png" alt="image-20220914012231116"></p>
+<hr>
+<h3 id="2-生成树"><a href="#2-生成树" class="headerlink" title="2.生成树"></a>2.生成树</h3><blockquote>
+<p>问题引入</p>
+</blockquote>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220914012337927.png" alt="image-20220914012337927"></p>
+<hr>
+<h4 id="①生成树的定义"><a href="#①生成树的定义" class="headerlink" title="①生成树的定义"></a>①生成树的定义</h4><p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220914012410047.png" alt="image-20220914012410047"></p>
+<hr>
+<h4 id="②生成树的性质"><a href="#②生成树的性质" class="headerlink" title="②生成树的性质"></a>②生成树的性质</h4><p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220914012447969.png" alt="image-20220914012447969"></p>
+<hr>
+<h4 id="③生成树算法"><a href="#③生成树算法" class="headerlink" title="③生成树算法"></a>③生成树算法</h4><p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220914012521957.png" alt="image-20220914012521957"></p>
+<hr>
+<h3 id="3-最小生成树及其应用"><a href="#3-最小生成树及其应用" class="headerlink" title="3.最小生成树及其应用"></a>3.最小生成树及其应用</h3><blockquote>
+<p>问题引入</p>
+</blockquote>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220914012621010.png" alt="image-20220914012621010"></p>
+<hr>
+<h4 id="①最小生成树定义-边赋权树"><a href="#①最小生成树定义-边赋权树" class="headerlink" title="①最小生成树定义-边赋权树"></a>①最小生成树定义-边赋权树</h4><p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220914012706573.png" alt="image-20220914012706573"></p>
+<hr>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220914012743031.png" alt="image-20220914012743031"></p>
+<h4 id="②最小生成树算法-Kruskal避圈法"><a href="#②最小生成树算法-Kruskal避圈法" class="headerlink" title="②最小生成树算法-Kruskal避圈法"></a>②最小生成树算法-Kruskal避圈法</h4><p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220914012853300.png" alt="image-20220914012853300"></p>
+<hr>
+<h4 id="③最小生成树算法-破圈法"><a href="#③最小生成树算法-破圈法" class="headerlink" title="③最小生成树算法-破圈法"></a>③最小生成树算法-破圈法</h4><p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220914012935345.png" alt="image-20220914012935345"></p>
+<hr>
+<h4 id="④最小生成树的应用"><a href="#④最小生成树的应用" class="headerlink" title="④最小生成树的应用"></a>④最小生成树的应用</h4><p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220914013006739.png" alt="image-20220914013006739"></p>
+<hr>
+<p>​	<img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220914013033054.png" alt="image-20220914013033054"></p>
+<hr>
+<h3 id="4-有向树和根树"><a href="#4-有向树和根树" class="headerlink" title="4.有向树和根树"></a>4.有向树和根树</h3><blockquote>
+<p>引入</p>
+</blockquote>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220914013136863.png" alt="image-20220914013136863"></p>
+<hr>
+<h4 id="①有向树定义"><a href="#①有向树定义" class="headerlink" title="①有向树定义"></a>①有向树定义</h4><p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220914013202851.png" alt="image-20220914013202851"></p>
+<hr>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220914013227679.png" alt="image-20220914013227679"></p>
+<hr>
+<h4 id="②有向树的性质"><a href="#②有向树的性质" class="headerlink" title="②有向树的性质"></a>②有向树的性质</h4><p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220914013256713.png" alt="image-20220914013256713"></p>
+<hr>
+<h4 id="③根树定义"><a href="#③根树定义" class="headerlink" title="③根树定义"></a>③根树定义</h4><p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220914013334623.png" alt="image-20220914013334623"></p>
+<hr>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220914013355992.png" alt="image-20220914013355992"></p>
+<hr>
+<blockquote>
+<p>儿子、兄弟、祖先、后代</p>
+</blockquote>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220914013425952.png" alt="image-20220914013425952"></p>
+<hr>
+<h4 id="④根子树定义"><a href="#④根子树定义" class="headerlink" title="④根子树定义"></a>④根子树定义</h4><p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220914013520733.png" alt="image-20220914013520733"></p>
+<hr>
+<h4 id="⑤根树的应用"><a href="#⑤根树的应用" class="headerlink" title="⑤根树的应用"></a>⑤根树的应用</h4><p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220914013547513.png" alt="image-20220914013547513"></p>
+<hr>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220914013609125.png" alt="image-20220914013609125"></p>
+<hr>
+<h3 id="5-根树的遍历"><a href="#5-根树的遍历" class="headerlink" title="5.根树的遍历"></a>5.根树的遍历</h3><blockquote>
+<p>引入</p>
+</blockquote>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220914013714398.png" alt="image-20220914013714398"></p>
+<hr>
+<h4 id="①有序树定义"><a href="#①有序树定义" class="headerlink" title="①有序树定义"></a>①有序树定义</h4><p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220914013753604.png" alt="image-20220914013753604"></p>
+<hr>
+<h4 id="②根树的遍历"><a href="#②根树的遍历" class="headerlink" title="②根树的遍历"></a>②根树的遍历</h4><p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220914014035594.png" alt="image-20220914014035594"></p>
+<hr>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220914014057485.png" alt="image-20220914014057485"></p>
+<hr>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220914014126296.png" alt="image-20220914014126296"></p>
+<hr>
+<h4 id="③根树遍历的应用"><a href="#③根树遍历的应用" class="headerlink" title="③根树遍历的应用"></a>③根树遍历的应用</h4><p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220914014221917.png" alt="image-20220914014221917"></p>
+<hr>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220914014307029.png" alt="image-20220914014307029"></p>
+<hr>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220914014337663.png" alt="image-20220914014337663"></p>
+<hr>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220914014400336.png" alt="image-20220914014400336"></p>
+<hr>
+<h3 id="6-二叉树"><a href="#6-二叉树" class="headerlink" title="6.二叉树"></a>6.二叉树</h3><blockquote>
+<p>引入</p>
+</blockquote>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220914014452926.png" alt="image-20220914014452926"></p>
+<hr>
+<h4 id="①二叉树的定义"><a href="#①二叉树的定义" class="headerlink" title="①二叉树的定义"></a>①二叉树的定义</h4><p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220914014513684.png" alt="image-20220914014513684"></p>
+<hr>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220914014533694.png" alt="image-20220914014533694"></p>
+<hr>
+<h4 id="②二叉树的性质"><a href="#②二叉树的性质" class="headerlink" title="②二叉树的性质"></a>②二叉树的性质</h4><p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220914014621503.png" alt="image-20220914014621503"></p>
+<hr>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220914014640408.png" alt="image-20220914014640408"></p>
+<hr>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220914014655280.png" alt="image-20220914014655280"></p>
+<hr>
+<h4 id="③前缀码"><a href="#③前缀码" class="headerlink" title="③前缀码"></a>③前缀码</h4><p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220914014730740.png" alt="image-20220914014730740"></p>
+<hr>
+<h4 id="④二叉树的应用"><a href="#④二叉树的应用" class="headerlink" title="④二叉树的应用"></a>④二叉树的应用</h4><p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220914014827401.png" alt="image-20220914014827401"></p>
+<hr>
+<h3 id="7-最优树及其应用"><a href="#7-最优树及其应用" class="headerlink" title="7.最优树及其应用"></a>7.最优树及其应用</h3><blockquote>
+<p>引入</p>
+</blockquote>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220914014917796.png" alt="image-20220914014917796"></p>
+<hr>
+<h4 id="①叶赋权树"><a href="#①叶赋权树" class="headerlink" title="①叶赋权树"></a>①叶赋权树</h4><p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220914015004499.png" alt="image-20220914015004499"></p>
+<hr>
+<h4 id="②最优二叉树"><a href="#②最优二叉树" class="headerlink" title="②最优二叉树"></a>②最优二叉树</h4><p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220914015039739.png" alt="image-20220914015039739"></p>
+<hr>
+<h4 id="③最优树的构造-Huffman算法"><a href="#③最优树的构造-Huffman算法" class="headerlink" title="③最优树的构造-Huffman算法"></a>③最优树的构造-Huffman算法</h4><p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220914015135331.png" alt="image-20220914015135331"></p>
+<hr>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220914015209368.png" alt="image-20220914015209368"></p>
+<hr>
+<blockquote>
+<p>最优二叉树不一定唯一</p>
+</blockquote>
+<hr>
+<h4 id="④最优树的应用"><a href="#④最优树的应用" class="headerlink" title="④最优树的应用"></a>④最优树的应用</h4><p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220914015303418.png" alt="image-20220914015303418"></p>
+<hr>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220914015340968.png" alt="image-20220914015340968"></p>
+<hr>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220914015357177.png" alt="image-20220914015357177"></p>
+<hr>
+<p><img src="/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics.assets/image-20220914015430749.png" alt="image-20220914015430749"></p>
+<hr>
+<hr>
+<hr>
+<table>
+<thead>
+<tr>
+<th>完</th>
+<th>结</th>
+<th>:cherry_blossom:</th>
+<th>撒</th>
+<th>花</th>
+</tr>
+</thead>
+</table>
+<hr>
+<hr>
+<hr>
+
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">2100301629王家宁</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="http://stuwjn.github.io/2022/09/14/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics/">http://stuwjn.github.io/2022/09/14/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">2100301629王家宁</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
+                                    <span class="chip bg-color">学习笔记</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="qq,qzone,wechat,weibo,douban" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/2022/09/14/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0Discrete%20Mathematics/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="离散数学笔记Discrete Mathematics">
+                        
+                        <span class="card-title">离散数学笔记Discrete Mathematics</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-09-14
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%A4%A7%E5%AD%A6/" class="post-category">
+                                    大学
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
+                        <span class="chip bg-color">学习笔记</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2022/08/14/Markdown%E5%B1%95%E5%BC%80%E6%8A%98%E5%8F%A0%E5%8A%9F%E8%83%BD/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="Markdown展开折叠功能">
+                        
+                        <span class="card-title">Markdown展开折叠功能</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-08-14
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%9F%BA%E7%A1%80/" class="post-category">
+                                    基础
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Markdown/">
+                        <span class="chip bg-color">Markdown</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('120')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE' || selection.getRangeAt(0).commonAncestorContainer.nodeName === 'CODE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + '来源: NING<br />'
+            + '文章作者: 王家宁<br />'
+            + '文章链接: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+
+  <!-- 是否加载使用自带的 prismjs. -->
+  <script type="text/javascript" src="/libs/prism/prism.min.js"></script>
+
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+
+    <div class="container row center-align"
+         style="margin-bottom: 15px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2022</span>
+            
+            <a href="/about" target="_blank">王家宁</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            
+            
+                
+            
+            
+                <span id="busuanzi_container_site_pv">
+                &nbsp;|&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;
+                    <span id="busuanzi_value_site_pv" class="white-color"></span>
+            </span>
+            
+            
+                <span id="busuanzi_container_site_uv">
+                &nbsp;|&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;
+                    <span id="busuanzi_value_site_uv" class="white-color"></span>
+            </span>
+            
+            <br>
+
+            <!-- 运行天数提醒. -->
+            
+                <span id="sitetime"> Loading ...</span>
+                <script>
+                    var calcSiteTime = function () {
+                        var seconds = 1000;
+                        var minutes = seconds * 60;
+                        var hours = minutes * 60;
+                        var days = hours * 24;
+                        var years = days * 365;
+                        var today = new Date();
+                        var startYear = "2022";
+                        var startMonth = "7";
+                        var startDate = "31";
+                        var startHour = "0";
+                        var startMinute = "0";
+                        var startSecond = "0";
+                        var todayYear = today.getFullYear();
+                        var todayMonth = today.getMonth() + 1;
+                        var todayDate = today.getDate();
+                        var todayHour = today.getHours();
+                        var todayMinute = today.getMinutes();
+                        var todaySecond = today.getSeconds();
+                        var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                        var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                        var diff = t2 - t1;
+                        var diffYears = Math.floor(diff / years);
+                        var diffDays = Math.floor((diff / days) - diffYears * 365);
+
+                        // 区分是否有年份.
+                        var language = 'zh-CN';
+                        if (startYear === String(todayYear)) {
+                            document.getElementById("year").innerHTML = todayYear;
+                            var daysTip = 'This site has been running for ' + diffDays + ' days';
+                            if (language === 'zh-CN') {
+                                daysTip = '本站已运行 ' + diffDays + ' 天';
+                            } else if (language === 'zh-HK') {
+                                daysTip = '本站已運行 ' + diffDays + ' 天';
+                            }
+                            document.getElementById("sitetime").innerHTML = daysTip;
+                        } else {
+                            document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                            var yearsAndDaysTip = 'This site has been running for ' + diffYears + ' years and '
+                                + diffDays + ' days';
+                            if (language === 'zh-CN') {
+                                yearsAndDaysTip = '本站已运行 ' + diffYears + ' 年 ' + diffDays + ' 天';
+                            } else if (language === 'zh-HK') {
+                                yearsAndDaysTip = '本站已運行 ' + diffYears + ' 年 ' + diffDays + ' 天';
+                            }
+                            document.getElementById("sitetime").innerHTML = yearsAndDaysTip;
+                        }
+                    }
+
+                    calcSiteTime();
+                </script>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/stuwjn/" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:1375559540@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1375559540" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1375559540" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 白天和黑夜主题 -->
+<div class="stars-con">
+    <div id="stars"></div>
+    <div id="stars2"></div>
+    <div id="stars3"></div>  
+</div>
+
+<script>
+    function switchNightMode() {
+        $('<div class="Cuteen_DarkSky"><div class="Cuteen_DarkPlanet"></div></div>').appendTo($('body')),
+        setTimeout(function () {
+            $('body').hasClass('DarkMode') 
+            ? ($('body').removeClass('DarkMode'), localStorage.setItem('isDark', '0'), $('#sum-moon-icon').removeClass("fa-sun").addClass('fa-moon')) 
+            : ($('body').addClass('DarkMode'), localStorage.setItem('isDark', '1'), $('#sum-moon-icon').addClass("fa-sun").removeClass('fa-moon')),
+            
+            setTimeout(function () {
+            $('.Cuteen_DarkSky').fadeOut(1e3, function () {
+                $(this).remove()
+            })
+            }, 2e3)
+        })
+    }
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    
+
+    
+
+    <!-- 雪花特效 -->
+     
+        <script type="text/javascript">
+            // 只在桌面版网页启用特效
+            var windowWidth = $(window).width();
+            if (windowWidth > 768) {
+                document.write('<script type="text/javascript" src="/libs/others/snow.js"><\/script>');
+            }
+        </script>
+    
+
+    <!-- 鼠标星星特效 -->
+    
+
+     
+        <script src="https://ssl.captcha.qq.com/TCaptcha.js"></script>
+        <script src="/libs/others/TencentCaptcha.js"></script>
+        <button id="TencentCaptcha" data-appid="xxxxxxxxxx" data-cbfn="callback" type="button" hidden></button>
+    
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    <!--腾讯兔小巢-->
+    
+    
+
+    
+
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>
